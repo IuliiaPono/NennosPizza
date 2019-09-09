@@ -1,0 +1,11 @@
+platform :ios, '10.0'
+inhibit_all_warnings!
+use_frameworks!
+
+target 'NennosPizza' do
+  pod 'Alamofire', '4.8.1'
+  pod 'Nuke', '7.6.2'
+  pod 'PromiseKit', '6.8.4'
+  pod 'PromiseKit/Alamofire', '6.8.4'
+  pod 'lottie-ios', '3.0.4'
+end

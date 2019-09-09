@@ -1,0 +1,40 @@
+PODS:
+  - Alamofire (4.8.1)
+  - lottie-ios (3.0.4)
+  - Nuke (7.6.2)
+  - PromiseKit (6.8.4):
+    - PromiseKit/CorePromise (= 6.8.4)
+    - PromiseKit/Foundation (= 6.8.4)
+    - PromiseKit/UIKit (= 6.8.4)
+  - PromiseKit/Alamofire (6.8.4):
+    - Alamofire (~> 4.0)
+    - PromiseKit/CorePromise
+  - PromiseKit/CorePromise (6.8.4)
+  - PromiseKit/Foundation (6.8.4):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.8.4):
+    - PromiseKit/CorePromise
+
+DEPENDENCIES:
+  - Alamofire (= 4.8.1)
+  - lottie-ios (= 3.0.4)
+  - Nuke (= 7.6.2)
+  - PromiseKit (= 6.8.4)
+  - PromiseKit/Alamofire (= 6.8.4)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Alamofire
+    - lottie-ios
+    - Nuke
+    - PromiseKit
+
+SPEC CHECKSUMS:
+  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
+  lottie-ios: 55a2de40418f8de2b155efaba4d4d1a025a5c570
+  Nuke: 392eff7cb037adbec6699febe9237849ac5dcc47
+  PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
+
+PODFILE CHECKSUM: d745c671bcca014c166bff07864c613b8d8eb574
+
+COCOAPODS: 1.6.1
