@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseNavigationBarView" customModule="NennosPizza" customModuleProvider="target">
+            <connections>
+                <outlet property="backButton" destination="9uk-zD-oeb" id="kz9-2G-cAj"/>
+                <outlet property="containerView" destination="vu7-rS-a9o" id="z0T-hp-6oo"/>
+                <outlet property="titleLabel" destination="DEx-cj-YWd" id="odS-VT-4ID"/>
+                <outlet property="topContainerConstraint" destination="bUi-J9-v6B" id="PQB-Ms-Yyh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" ambiguous="YES" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vu7-rS-a9o">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DEx-cj-YWd" customClass="BrandLabel" customModule="NennosPizza" customModuleProvider="target">
+                            <rect key="frame" x="186" y="11.5" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="brandConfigId" value="redTitle"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9uk-zD-oeb">
+                            <rect key="frame" x="0.0" y="0.0" width="60" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="jRp-CV-R1s"/>
+                            </constraints>
+                            <color key="tintColor" red="0.89803921568627454" green="0.38039215686274508" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="4Sc-Nk-8Bc"/>
+                        <constraint firstItem="DEx-cj-YWd" firstAttribute="centerX" secondItem="vu7-rS-a9o" secondAttribute="centerX" id="Gcf-H5-7pH"/>
+                        <constraint firstItem="9uk-zD-oeb" firstAttribute="leading" secondItem="vu7-rS-a9o" secondAttribute="leading" id="NdF-q8-6MC"/>
+                        <constraint firstAttribute="bottom" secondItem="9uk-zD-oeb" secondAttribute="bottom" id="Wgq-Z1-gs4"/>
+                        <constraint firstItem="9uk-zD-oeb" firstAttribute="top" secondItem="vu7-rS-a9o" secondAttribute="top" id="r3j-lU-SEy"/>
+                        <constraint firstItem="DEx-cj-YWd" firstAttribute="centerY" secondItem="vu7-rS-a9o" secondAttribute="centerY" id="xDL-uC-wgi"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x9T-WA-Unc" customClass="BrandView" customModule="NennosPizza" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.8980392157" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="WhL-BG-SgD"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="brandConfigId" value="lightGray"/>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="x9T-WA-Unc" secondAttribute="bottom" id="29n-fz-Yta"/>
+                <constraint firstItem="x9T-WA-Unc" firstAttribute="top" secondItem="vu7-rS-a9o" secondAttribute="bottom" id="Lxa-p3-AHQ"/>
+                <constraint firstItem="x9T-WA-Unc" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="QM1-FH-bV5"/>
+                <constraint firstItem="vu7-rS-a9o" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="bUi-J9-v6B"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="vu7-rS-a9o" secondAttribute="trailing" id="fgh-ZO-zXX"/>
+                <constraint firstItem="vu7-rS-a9o" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ntu-My-hHZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="x9T-WA-Unc" secondAttribute="trailing" id="p3y-ur-zV4"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.59999999999999" y="152.92353823088456"/>
+        </view>
+    </objects>
+</document>

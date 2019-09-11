@@ -7,12 +7,71 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		31034FAF23277A8C001828BE /* TableViewDataAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FAE23277A8C001828BE /* TableViewDataAdapter.swift */; };
+		31034FB223277AEC001828BE /* CellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FB123277AEC001828BE /* CellViewModel.swift */; };
+		31034FB523277B17001828BE /* Accessible.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FB423277B17001828BE /* Accessible.swift */; };
+		31034FB823277B58001828BE /* AccessibilityDisplayFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FB723277B58001828BE /* AccessibilityDisplayFunction.swift */; };
+		31034FBA23277E14001828BE /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FB923277E14001828BE /* Reusable.swift */; };
+		31034FBD23277E8F001828BE /* UITableView+ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FBC23277E8F001828BE /* UITableView+ViewModels.swift */; };
+		31034FC023277F00001828BE /* XibInitializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FBF23277F00001828BE /* XibInitializable.swift */; };
+		31034FC223277F80001828BE /* UIView+AttachmentToParent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FC123277F80001828BE /* UIView+AttachmentToParent.swift */; };
+		31034FE62327A44D001828BE /* Purchasable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FE52327A44D001828BE /* Purchasable.swift */; };
+		31034FE82327A48A001828BE /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FE72327A48A001828BE /* Drink.swift */; };
+		31034FEA2327A4B5001828BE /* Pizza.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FE92327A4B5001828BE /* Pizza.swift */; };
+		31034FEC2327A4C9001828BE /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FEB2327A4C9001828BE /* Ingredient.swift */; };
+		31034FEF2327B66E001828BE /* Decoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FEE2327B66E001828BE /* Decoder.swift */; };
+		31034FF12327B6C7001828BE /* DictionaryDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FF02327B6C7001828BE /* DictionaryDecoder.swift */; };
+		31034FF42327B76C001828BE /* HtttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FF32327B76C001828BE /* HtttpClient.swift */; };
+		31034FF72327B7C2001828BE /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FF62327B7C1001828BE /* Types.swift */; };
+		31034FF92327B81E001828BE /* AlamofireHttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FF82327B81E001828BE /* AlamofireHttpClient.swift */; };
+		31034FFB2327B9C1001828BE /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FFA2327B9C1001828BE /* HttpError.swift */; };
+		31034FFD2327BAD4001828BE /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31034FFC2327BAD4001828BE /* BackendError.swift */; };
+		310350042327BF1E001828BE /* BackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350032327BF1E001828BE /* BackendService.swift */; };
+		310350062327BF4D001828BE /* ProductsBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350052327BF4D001828BE /* ProductsBackendService.swift */; };
+		310350082327C055001828BE /* BackendPizzaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350072327C055001828BE /* BackendPizzaObject.swift */; };
+		3103500A2327C098001828BE /* BackendPizzasObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350092327C098001828BE /* BackendPizzasObject.swift */; };
+		3103500C2327C1C7001828BE /* FoodBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103500B2327C1C7001828BE /* FoodBackendService.swift */; };
+		3103500E2327C256001828BE /* FoodBackendServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103500D2327C256001828BE /* FoodBackendServiceDefault.swift */; };
+		310350102327C2FE001828BE /* BackendRequestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103500F2327C2FD001828BE /* BackendRequestPath.swift */; };
+		310350192327CB4A001828BE /* PizzasCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350182327CB4A001828BE /* PizzasCoordinator.swift */; };
+		3103501E2327CE72001828BE /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103501D2327CE72001828BE /* BaseCoordinator.swift */; };
+		310350212327CECD001828BE /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350202327CECD001828BE /* BaseViewController.swift */; };
+		310350242327D153001828BE /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350232327D153001828BE /* Interactor.swift */; };
+		310350272327D1A7001828BE /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350262327D1A7001828BE /* Presenter.swift */; };
+		310350292327D20E001828BE /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350282327D20E001828BE /* BasePresenter.swift */; };
+		3103502B2327D237001828BE /* BaseInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103502A2327D237001828BE /* BaseInteractor.swift */; };
+		310350312327D479001828BE /* Router+PurchaseBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350302327D479001828BE /* Router+PurchaseBanner.swift */; };
+		310350332327D4F0001828BE /* Router+LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350322327D4F0001828BE /* Router+LoaderView.swift */; };
+		310350352327DB3C001828BE /* MainStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350342327DB3C001828BE /* MainStoryboard.swift */; };
+		310350372327DCCF001828BE /* PizzasInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350362327DCCF001828BE /* PizzasInteractor.swift */; };
+		310350392327DCF0001828BE /* PizzasPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350382327DCF0001828BE /* PizzasPresenter.swift */; };
+		3103503B2327E038001828BE /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103503A2327E038001828BE /* Section.swift */; };
+		3103503E2327E086001828BE /* SupplementaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103503D2327E086001828BE /* SupplementaryViewModel.swift */; };
+		310350412327E542001828BE /* PizzaBasicCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350402327E542001828BE /* PizzaBasicCellViewModel.swift */; };
+		310350462327E7E5001828BE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350452327E7E4001828BE /* Router.swift */; };
+		310350492327E951001828BE /* PizzaBasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350482327E951001828BE /* PizzaBasicTableViewCell.swift */; };
+		3122092E2328D344001471F9 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122092D2328D344001471F9 /* ImageDownloader.swift */; };
+		3122093123290F8A001471F9 /* PizzaLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093023290F8A001471F9 /* PizzaLoadingView.swift */; };
+		31220935232914B4001471F9 /* BaseNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31220934232914B4001471F9 /* BaseNavigationBarView.swift */; };
+		3122093823291915001471F9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093723291915001471F9 /* AppCoordinator.swift */; };
+		3122093A23292264001471F9 /* UINavigationController+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093923292264001471F9 /* UINavigationController+Fade.swift */; };
 		312AF51823267A4500FED45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF51723267A4500FED45F /* AppDelegate.swift */; };
-		312AF51A23267A4500FED45F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF51923267A4500FED45F /* ViewController.swift */; };
+		312AF51A23267A4500FED45F /* PizzasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF51923267A4500FED45F /* PizzasViewController.swift */; };
 		312AF51D23267A4500FED45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312AF51B23267A4500FED45F /* Main.storyboard */; };
 		312AF51F23267A4600FED45F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 312AF51E23267A4600FED45F /* Assets.xcassets */; };
 		312AF52223267A4600FED45F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312AF52023267A4600FED45F /* LaunchScreen.storyboard */; };
 		312AF52D23267A4600FED45F /* NennosPizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF52C23267A4600FED45F /* NennosPizzaTests.swift */; };
+		312AF53A23267D7A00FED45F /* BrandFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF53923267D7A00FED45F /* BrandFont.swift */; };
+		312AF53C23267D8600FED45F /* BrandColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF53B23267D8600FED45F /* BrandColor.swift */; };
+		312AF54123267E6500FED45F /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF54023267E6500FED45F /* UIColor+Hex.swift */; };
+		312AF5432326831800FED45F /* BrandLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF5422326831800FED45F /* BrandLabel.swift */; };
+		312AF5452326862A00FED45F /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF5442326862A00FED45F /* BrandView.swift */; };
+		312AF547232686F900FED45F /* BrandActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF546232686F900FED45F /* BrandActionButton.swift */; };
+		31AC08DB2326905100D1B8DA /* PizzaLoader.json in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08DA2326905100D1B8DA /* PizzaLoader.json */; };
+		31AC08DD23269B1500D1B8DA /* NotificationHintView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08DC23269B1500D1B8DA /* NotificationHintView.xib */; };
+		31AC08DF23269DC600D1B8DA /* BaseNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08DE23269DC600D1B8DA /* BaseNavigationBarView.xib */; };
+		31AC08E12326A0E500D1B8DA /* PizzaBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08E02326A0E500D1B8DA /* PizzaBasicTableViewCell.xib */; };
+		31AC08E52326A3D900D1B8DA /* SelectableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08E42326A3D900D1B8DA /* SelectableTableViewCell.xib */; };
 		C732770D17F2EFBA6898C8A0 /* Pods_NennosPizza.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37232298E139DBFFA5DC533B /* Pods_NennosPizza.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,9 +87,57 @@
 
 /* Begin PBXFileReference section */
 		0F261A5DC03597BE2A3701AF /* Pods-NennosPizza.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NennosPizza.debug.xcconfig"; path = "Target Support Files/Pods-NennosPizza/Pods-NennosPizza.debug.xcconfig"; sourceTree = "<group>"; };
+		31034FAE23277A8C001828BE /* TableViewDataAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataAdapter.swift; sourceTree = "<group>"; };
+		31034FB123277AEC001828BE /* CellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellViewModel.swift; sourceTree = "<group>"; };
+		31034FB423277B17001828BE /* Accessible.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Accessible.swift; sourceTree = "<group>"; };
+		31034FB723277B58001828BE /* AccessibilityDisplayFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityDisplayFunction.swift; sourceTree = "<group>"; };
+		31034FB923277E14001828BE /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		31034FBC23277E8F001828BE /* UITableView+ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+ViewModels.swift"; sourceTree = "<group>"; };
+		31034FBF23277F00001828BE /* XibInitializable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XibInitializable.swift; sourceTree = "<group>"; };
+		31034FC123277F80001828BE /* UIView+AttachmentToParent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+AttachmentToParent.swift"; sourceTree = "<group>"; };
+		31034FE52327A44D001828BE /* Purchasable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Purchasable.swift; sourceTree = "<group>"; };
+		31034FE72327A48A001828BE /* Drink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
+		31034FE92327A4B5001828BE /* Pizza.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pizza.swift; sourceTree = "<group>"; };
+		31034FEB2327A4C9001828BE /* Ingredient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		31034FEE2327B66E001828BE /* Decoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Decoder.swift; sourceTree = "<group>"; };
+		31034FF02327B6C7001828BE /* DictionaryDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryDecoder.swift; sourceTree = "<group>"; };
+		31034FF32327B76C001828BE /* HtttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtttpClient.swift; sourceTree = "<group>"; };
+		31034FF62327B7C1001828BE /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		31034FF82327B81E001828BE /* AlamofireHttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireHttpClient.swift; sourceTree = "<group>"; };
+		31034FFA2327B9C1001828BE /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		31034FFC2327BAD4001828BE /* BackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
+		310350032327BF1E001828BE /* BackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendService.swift; sourceTree = "<group>"; };
+		310350052327BF4D001828BE /* ProductsBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsBackendService.swift; sourceTree = "<group>"; };
+		310350072327C055001828BE /* BackendPizzaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendPizzaObject.swift; sourceTree = "<group>"; };
+		310350092327C098001828BE /* BackendPizzasObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendPizzasObject.swift; sourceTree = "<group>"; };
+		3103500B2327C1C7001828BE /* FoodBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBackendService.swift; sourceTree = "<group>"; };
+		3103500D2327C256001828BE /* FoodBackendServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBackendServiceDefault.swift; sourceTree = "<group>"; };
+		3103500F2327C2FD001828BE /* BackendRequestPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendRequestPath.swift; sourceTree = "<group>"; };
+		310350182327CB4A001828BE /* PizzasCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasCoordinator.swift; sourceTree = "<group>"; };
+		3103501D2327CE72001828BE /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		310350202327CECD001828BE /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		310350232327D153001828BE /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		310350262327D1A7001828BE /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		310350282327D20E001828BE /* BasePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		3103502A2327D237001828BE /* BaseInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseInteractor.swift; sourceTree = "<group>"; };
+		310350302327D479001828BE /* Router+PurchaseBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+PurchaseBanner.swift"; sourceTree = "<group>"; };
+		310350322327D4F0001828BE /* Router+LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+LoaderView.swift"; sourceTree = "<group>"; };
+		310350342327DB3C001828BE /* MainStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainStoryboard.swift; sourceTree = "<group>"; };
+		310350362327DCCF001828BE /* PizzasInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasInteractor.swift; sourceTree = "<group>"; };
+		310350382327DCF0001828BE /* PizzasPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasPresenter.swift; sourceTree = "<group>"; };
+		3103503A2327E038001828BE /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
+		3103503D2327E086001828BE /* SupplementaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupplementaryViewModel.swift; sourceTree = "<group>"; };
+		310350402327E542001828BE /* PizzaBasicCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaBasicCellViewModel.swift; sourceTree = "<group>"; };
+		310350452327E7E4001828BE /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		310350482327E951001828BE /* PizzaBasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaBasicTableViewCell.swift; sourceTree = "<group>"; };
+		3122092D2328D344001471F9 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		3122093023290F8A001471F9 /* PizzaLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLoadingView.swift; sourceTree = "<group>"; };
+		31220934232914B4001471F9 /* BaseNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBarView.swift; sourceTree = "<group>"; };
+		3122093723291915001471F9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3122093923292264001471F9 /* UINavigationController+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Fade.swift"; sourceTree = "<group>"; };
 		312AF51423267A4500FED45F /* NennosPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NennosPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312AF51723267A4500FED45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		312AF51923267A4500FED45F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		312AF51923267A4500FED45F /* PizzasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasViewController.swift; sourceTree = "<group>"; };
 		312AF51C23267A4500FED45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		312AF51E23267A4600FED45F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		312AF52123267A4600FED45F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -38,6 +145,17 @@
 		312AF52823267A4600FED45F /* NennosPizzaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NennosPizzaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		312AF52C23267A4600FED45F /* NennosPizzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NennosPizzaTests.swift; sourceTree = "<group>"; };
 		312AF52E23267A4600FED45F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		312AF53923267D7A00FED45F /* BrandFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandFont.swift; sourceTree = "<group>"; };
+		312AF53B23267D8600FED45F /* BrandColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandColor.swift; sourceTree = "<group>"; };
+		312AF54023267E6500FED45F /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		312AF5422326831800FED45F /* BrandLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandLabel.swift; sourceTree = "<group>"; };
+		312AF5442326862A00FED45F /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
+		312AF546232686F900FED45F /* BrandActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandActionButton.swift; sourceTree = "<group>"; };
+		31AC08DA2326905100D1B8DA /* PizzaLoader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PizzaLoader.json; sourceTree = "<group>"; };
+		31AC08DC23269B1500D1B8DA /* NotificationHintView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NotificationHintView.xib; sourceTree = "<group>"; };
+		31AC08DE23269DC600D1B8DA /* BaseNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseNavigationBarView.xib; sourceTree = "<group>"; };
+		31AC08E02326A0E500D1B8DA /* PizzaBasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzaBasicTableViewCell.xib; sourceTree = "<group>"; };
+		31AC08E42326A3D900D1B8DA /* SelectableTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SelectableTableViewCell.xib; sourceTree = "<group>"; };
 		37232298E139DBFFA5DC533B /* Pods_NennosPizza.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NennosPizza.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6199B0455C47C72E43B12325 /* Pods-NennosPizza.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NennosPizza.release.xcconfig"; path = "Target Support Files/Pods-NennosPizza/Pods-NennosPizza.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +179,366 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		31034FAC23277A61001828BE /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				31034FB023277AD8001828BE /* CellVewModels */,
+				31034FAD23277A6D001828BE /* Adapters */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		31034FAD23277A6D001828BE /* Adapters */ = {
+			isa = PBXGroup;
+			children = (
+				31034FAE23277A8C001828BE /* TableViewDataAdapter.swift */,
+				3103503A2327E038001828BE /* Section.swift */,
+			);
+			path = Adapters;
+			sourceTree = "<group>";
+		};
+		31034FB023277AD8001828BE /* CellVewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3103503C2327E05C001828BE /* ViewModels */,
+				31034FBB23277E7B001828BE /* Extensions */,
+				31034FB323277B09001828BE /* Protocols */,
+			);
+			path = CellVewModels;
+			sourceTree = "<group>";
+		};
+		31034FB323277B09001828BE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				31034FB623277B38001828BE /* Accessibility */,
+				31034FB923277E14001828BE /* Reusable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		31034FB623277B38001828BE /* Accessibility */ = {
+			isa = PBXGroup;
+			children = (
+				31034FB423277B17001828BE /* Accessible.swift */,
+				31034FB723277B58001828BE /* AccessibilityDisplayFunction.swift */,
+			);
+			path = Accessibility;
+			sourceTree = "<group>";
+		};
+		31034FBB23277E7B001828BE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				31034FBC23277E8F001828BE /* UITableView+ViewModels.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		31034FBE23277EDB001828BE /* XibHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				31034FBF23277F00001828BE /* XibInitializable.swift */,
+			);
+			path = XibHelpers;
+			sourceTree = "<group>";
+		};
+		31034FC423278247001828BE /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				31034FED2327B65C001828BE /* Decoder */,
+				31034FF22327B73C001828BE /* HttpClient */,
+				31034FFE2327BC17001828BE /* BackendService */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		31034FE22327A426001828BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				31034FE42327A434001828BE /* Protocols */,
+				31034FE32327A42D001828BE /* Entities */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		31034FE32327A42D001828BE /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				31034FE72327A48A001828BE /* Drink.swift */,
+				31034FE92327A4B5001828BE /* Pizza.swift */,
+				31034FEB2327A4C9001828BE /* Ingredient.swift */,
+				31034FFC2327BAD4001828BE /* BackendError.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		31034FE42327A434001828BE /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				31034FE52327A44D001828BE /* Purchasable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		31034FED2327B65C001828BE /* Decoder */ = {
+			isa = PBXGroup;
+			children = (
+				31034FEE2327B66E001828BE /* Decoder.swift */,
+				31034FF02327B6C7001828BE /* DictionaryDecoder.swift */,
+			);
+			path = Decoder;
+			sourceTree = "<group>";
+		};
+		31034FF22327B73C001828BE /* HttpClient */ = {
+			isa = PBXGroup;
+			children = (
+				31034FF32327B76C001828BE /* HtttpClient.swift */,
+				31034FF82327B81E001828BE /* AlamofireHttpClient.swift */,
+				31034FFA2327B9C1001828BE /* HttpError.swift */,
+			);
+			path = HttpClient;
+			sourceTree = "<group>";
+		};
+		31034FF52327B798001828BE /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				31034FF62327B7C1001828BE /* Types.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
+		31034FFE2327BC17001828BE /* BackendService */ = {
+			isa = PBXGroup;
+			children = (
+				310350022327BC84001828BE /* Common */,
+				310350002327BC5E001828BE /* Food */,
+			);
+			path = BackendService;
+			sourceTree = "<group>";
+		};
+		31034FFF2327BC43001828BE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				310350072327C055001828BE /* BackendPizzaObject.swift */,
+				310350092327C098001828BE /* BackendPizzasObject.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		310350002327BC5E001828BE /* Food */ = {
+			isa = PBXGroup;
+			children = (
+				31034FFF2327BC43001828BE /* Models */,
+				3103500B2327C1C7001828BE /* FoodBackendService.swift */,
+				3103500D2327C256001828BE /* FoodBackendServiceDefault.swift */,
+			);
+			path = Food;
+			sourceTree = "<group>";
+		};
+		310350022327BC84001828BE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				310350032327BF1E001828BE /* BackendService.swift */,
+				310350052327BF4D001828BE /* ProductsBackendService.swift */,
+				3103500F2327C2FD001828BE /* BackendRequestPath.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		310350112327C58F001828BE /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				310350432327E561001828BE /* Modules */,
+				310350422327E55B001828BE /* UI */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		310350122327C8FD001828BE /* Pizzas */ = {
+			isa = PBXGroup;
+			children = (
+				310350132327CAB8001828BE /* Coordinator */,
+				310350142327CAC8001828BE /* Interactor */,
+				310350152327CADA001828BE /* Presenter */,
+				310350172327CAF1001828BE /* View */,
+			);
+			path = Pizzas;
+			sourceTree = "<group>";
+		};
+		310350132327CAB8001828BE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				310350182327CB4A001828BE /* PizzasCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		310350142327CAC8001828BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				310350362327DCCF001828BE /* PizzasInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		310350152327CADA001828BE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				310350382327DCF0001828BE /* PizzasPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		310350172327CAF1001828BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				312AF51923267A4500FED45F /* PizzasViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3103501A2327CE52001828BE /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				3103501B2327CE58001828BE /* Coordinator */,
+				310350222327D13D001828BE /* Interactor */,
+				310350252327D198001828BE /* Presenter */,
+				3103502C2327D246001828BE /* Router */,
+				3103501F2327CEB8001828BE /* View */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		3103501B2327CE58001828BE /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				3103501D2327CE72001828BE /* BaseCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		3103501F2327CEB8001828BE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				310350202327CECD001828BE /* BaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		310350222327D13D001828BE /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				310350232327D153001828BE /* Interactor.swift */,
+				3103502A2327D237001828BE /* BaseInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		310350252327D198001828BE /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				310350262327D1A7001828BE /* Presenter.swift */,
+				310350282327D20E001828BE /* BasePresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		3103502C2327D246001828BE /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				310350452327E7E4001828BE /* Router.swift */,
+				310350302327D479001828BE /* Router+PurchaseBanner.swift */,
+				310350322327D4F0001828BE /* Router+LoaderView.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		3103503C2327E05C001828BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				31034FB123277AEC001828BE /* CellViewModel.swift */,
+				3103503D2327E086001828BE /* SupplementaryViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3103503F2327E512001828BE /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				310350402327E542001828BE /* PizzaBasicCellViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		310350422327E55B001828BE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				3122093223291485001471F9 /* Base */,
+				310350442327E583001828BE /* PizzasMain */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		310350432327E561001828BE /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				3103501A2327CE52001828BE /* Base */,
+				310350122327C8FD001828BE /* Pizzas */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		310350442327E583001828BE /* PizzasMain */ = {
+			isa = PBXGroup;
+			children = (
+				310350472327E939001828BE /* Cells */,
+				3103503F2327E512001828BE /* ViewModels */,
+			);
+			path = PizzasMain;
+			sourceTree = "<group>";
+		};
+		310350472327E939001828BE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				310350482327E951001828BE /* PizzaBasicTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		3122092C2328D332001471F9 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				312AF53823267D5E00FED45F /* BrandHelper */,
+				3122092D2328D344001471F9 /* ImageDownloader.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		3122093223291485001471F9 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				312209332329148C001471F9 /* Views */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		312209332329148C001471F9 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				3122093023290F8A001471F9 /* PizzaLoadingView.swift */,
+				31220934232914B4001471F9 /* BaseNavigationBarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		31220936232918FD001471F9 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				312AF51723267A4500FED45F /* AppDelegate.swift */,
+				3122093723291915001471F9 /* AppCoordinator.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
 		312AF50B23267A4500FED45F = {
 			isa = PBXGroup;
 			children = (
@@ -84,11 +562,11 @@
 		312AF51623267A4500FED45F /* NennosPizza */ = {
 			isa = PBXGroup;
 			children = (
-				312AF51723267A4500FED45F /* AppDelegate.swift */,
-				312AF51923267A4500FED45F /* ViewController.swift */,
-				312AF51B23267A4500FED45F /* Main.storyboard */,
-				312AF51E23267A4600FED45F /* Assets.xcassets */,
-				312AF52023267A4600FED45F /* LaunchScreen.storyboard */,
+				31220936232918FD001471F9 /* Application */,
+				312AF53723267D5200FED45F /* CommonComponents */,
+				31034FC423278247001828BE /* Networking */,
+				310350112327C58F001828BE /* ViewControllers */,
+				312AF54823268D2E00FED45F /* Resources */,
 				312AF52323267A4600FED45F /* Info.plist */,
 			);
 			path = NennosPizza;
@@ -103,13 +581,95 @@
 			path = NennosPizzaTests;
 			sourceTree = "<group>";
 		};
+		312AF53723267D5200FED45F /* CommonComponents */ = {
+			isa = PBXGroup;
+			children = (
+				3122092C2328D332001471F9 /* Helpers */,
+				31034FF52327B798001828BE /* Types */,
+				31034FE22327A426001828BE /* Models */,
+				31034FBE23277EDB001828BE /* XibHelpers */,
+				31034FAC23277A61001828BE /* TableView */,
+				312AF53D23267E0900FED45F /* Extensions */,
+			);
+			path = CommonComponents;
+			sourceTree = "<group>";
+		};
+		312AF53823267D5E00FED45F /* BrandHelper */ = {
+			isa = PBXGroup;
+			children = (
+				312AF53923267D7A00FED45F /* BrandFont.swift */,
+				312AF53B23267D8600FED45F /* BrandColor.swift */,
+				312AF5422326831800FED45F /* BrandLabel.swift */,
+				312AF5442326862A00FED45F /* BrandView.swift */,
+				312AF546232686F900FED45F /* BrandActionButton.swift */,
+			);
+			path = BrandHelper;
+			sourceTree = "<group>";
+		};
+		312AF53D23267E0900FED45F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				312AF54023267E6500FED45F /* UIColor+Hex.swift */,
+				31034FC123277F80001828BE /* UIView+AttachmentToParent.swift */,
+				3122093923292264001471F9 /* UINavigationController+Fade.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		312AF54823268D2E00FED45F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				31AC08DA2326905100D1B8DA /* PizzaLoader.json */,
+				312AF51E23267A4600FED45F /* Assets.xcassets */,
+				312AF54923268D3B00FED45F /* Storyboards */,
+				312AF54A23268DB100FED45F /* Xib Views */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		312AF54923268D3B00FED45F /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				312AF51B23267A4500FED45F /* Main.storyboard */,
+				312AF52023267A4600FED45F /* LaunchScreen.storyboard */,
+				310350342327DB3C001828BE /* MainStoryboard.swift */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		312AF54A23268DB100FED45F /* Xib Views */ = {
+			isa = PBXGroup;
+			children = (
+				31AC08E32326A0FC00D1B8DA /* Table View Cells */,
+				31AC08E22326A0E900D1B8DA /* General */,
+			);
+			path = "Xib Views";
+			sourceTree = "<group>";
+		};
+		31AC08E22326A0E900D1B8DA /* General */ = {
+			isa = PBXGroup;
+			children = (
+				31AC08DC23269B1500D1B8DA /* NotificationHintView.xib */,
+				31AC08DE23269DC600D1B8DA /* BaseNavigationBarView.xib */,
+			);
+			path = General;
+			sourceTree = "<group>";
+		};
+		31AC08E32326A0FC00D1B8DA /* Table View Cells */ = {
+			isa = PBXGroup;
+			children = (
+				31AC08E02326A0E500D1B8DA /* PizzaBasicTableViewCell.xib */,
+				31AC08E42326A3D900D1B8DA /* SelectableTableViewCell.xib */,
+			);
+			path = "Table View Cells";
+			sourceTree = "<group>";
+		};
 		75490692CC55C14BE4DE802A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				0F261A5DC03597BE2A3701AF /* Pods-NennosPizza.debug.xcconfig */,
 				6199B0455C47C72E43B12325 /* Pods-NennosPizza.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -204,9 +764,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31AC08E12326A0E500D1B8DA /* PizzaBasicTableViewCell.xib in Resources */,
 				312AF52223267A4600FED45F /* LaunchScreen.storyboard in Resources */,
+				31AC08DB2326905100D1B8DA /* PizzaLoader.json in Resources */,
+				31AC08E52326A3D900D1B8DA /* SelectableTableViewCell.xib in Resources */,
 				312AF51F23267A4600FED45F /* Assets.xcassets in Resources */,
+				31AC08DF23269DC600D1B8DA /* BaseNavigationBarView.xib in Resources */,
 				312AF51D23267A4500FED45F /* Main.storyboard in Resources */,
+				31AC08DD23269B1500D1B8DA /* NotificationHintView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +817,7 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-NennosPizza/Pods-NennosPizza-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireNetworkActivityIndicator/AlamofireNetworkActivityIndicator.framework",
 				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
 				"${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
@@ -261,6 +827,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireNetworkActivityIndicator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PromiseKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
@@ -277,8 +844,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312AF51A23267A4500FED45F /* ViewController.swift in Sources */,
+				31034FFD2327BAD4001828BE /* BackendError.swift in Sources */,
+				310350312327D479001828BE /* Router+PurchaseBanner.swift in Sources */,
+				3122092E2328D344001471F9 /* ImageDownloader.swift in Sources */,
+				3122093A23292264001471F9 /* UINavigationController+Fade.swift in Sources */,
+				310350292327D20E001828BE /* BasePresenter.swift in Sources */,
+				31034FB223277AEC001828BE /* CellViewModel.swift in Sources */,
+				312AF5452326862A00FED45F /* BrandView.swift in Sources */,
+				312AF53A23267D7A00FED45F /* BrandFont.swift in Sources */,
+				31034FF72327B7C2001828BE /* Types.swift in Sources */,
+				31034FFB2327B9C1001828BE /* HttpError.swift in Sources */,
+				310350332327D4F0001828BE /* Router+LoaderView.swift in Sources */,
+				310350392327DCF0001828BE /* PizzasPresenter.swift in Sources */,
+				31220935232914B4001471F9 /* BaseNavigationBarView.swift in Sources */,
+				310350462327E7E5001828BE /* Router.swift in Sources */,
+				31034FB523277B17001828BE /* Accessible.swift in Sources */,
+				31034FEF2327B66E001828BE /* Decoder.swift in Sources */,
+				31034FC223277F80001828BE /* UIView+AttachmentToParent.swift in Sources */,
+				310350102327C2FE001828BE /* BackendRequestPath.swift in Sources */,
+				312AF53C23267D8600FED45F /* BrandColor.swift in Sources */,
+				310350412327E542001828BE /* PizzaBasicCellViewModel.swift in Sources */,
+				310350212327CECD001828BE /* BaseViewController.swift in Sources */,
+				312AF547232686F900FED45F /* BrandActionButton.swift in Sources */,
+				3103500E2327C256001828BE /* FoodBackendServiceDefault.swift in Sources */,
+				3122093823291915001471F9 /* AppCoordinator.swift in Sources */,
+				31034FF92327B81E001828BE /* AlamofireHttpClient.swift in Sources */,
+				31034FBA23277E14001828BE /* Reusable.swift in Sources */,
+				312AF51A23267A4500FED45F /* PizzasViewController.swift in Sources */,
+				31034FBD23277E8F001828BE /* UITableView+ViewModels.swift in Sources */,
+				31034FE82327A48A001828BE /* Drink.swift in Sources */,
 				312AF51823267A4500FED45F /* AppDelegate.swift in Sources */,
+				3103501E2327CE72001828BE /* BaseCoordinator.swift in Sources */,
+				310350062327BF4D001828BE /* ProductsBackendService.swift in Sources */,
+				310350192327CB4A001828BE /* PizzasCoordinator.swift in Sources */,
+				31034FEC2327A4C9001828BE /* Ingredient.swift in Sources */,
+				312AF5432326831800FED45F /* BrandLabel.swift in Sources */,
+				3103500C2327C1C7001828BE /* FoodBackendService.swift in Sources */,
+				310350082327C055001828BE /* BackendPizzaObject.swift in Sources */,
+				31034FB823277B58001828BE /* AccessibilityDisplayFunction.swift in Sources */,
+				31034FF12327B6C7001828BE /* DictionaryDecoder.swift in Sources */,
+				310350492327E951001828BE /* PizzaBasicTableViewCell.swift in Sources */,
+				31034FAF23277A8C001828BE /* TableViewDataAdapter.swift in Sources */,
+				3103500A2327C098001828BE /* BackendPizzasObject.swift in Sources */,
+				31034FEA2327A4B5001828BE /* Pizza.swift in Sources */,
+				31034FC023277F00001828BE /* XibInitializable.swift in Sources */,
+				310350042327BF1E001828BE /* BackendService.swift in Sources */,
+				310350242327D153001828BE /* Interactor.swift in Sources */,
+				31034FE62327A44D001828BE /* Purchasable.swift in Sources */,
+				3103502B2327D237001828BE /* BaseInteractor.swift in Sources */,
+				310350272327D1A7001828BE /* Presenter.swift in Sources */,
+				3122093123290F8A001471F9 /* PizzaLoadingView.swift in Sources */,
+				310350352327DB3C001828BE /* MainStoryboard.swift in Sources */,
+				310350372327DCCF001828BE /* PizzasInteractor.swift in Sources */,
+				3103503B2327E038001828BE /* Section.swift in Sources */,
+				3103503E2327E086001828BE /* SupplementaryViewModel.swift in Sources */,
+				31034FF42327B76C001828BE /* HtttpClient.swift in Sources */,
+				312AF54123267E6500FED45F /* UIColor+Hex.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +1065,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LLY58X9Y2W;
 				INFOPLIST_FILE = NennosPizza/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,7 +1073,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iuliiaponomareva.NennosPizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -463,6 +1085,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LLY58X9Y2W;
 				INFOPLIST_FILE = NennosPizza/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,7 +1093,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.iuliiaponomareva.NennosPizza;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'NennosPizza' do
   pod 'Alamofire', '4.8.1'
+  pod 'AlamofireNetworkActivityIndicator'
   pod 'Nuke', '7.6.2'
   pod 'PromiseKit', '6.8.4'
   pod 'PromiseKit/Alamofire', '6.8.4'
