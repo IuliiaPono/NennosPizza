@@ -10,9 +10,9 @@ import UIKit
 
 final class BaseNavigationBarView: UIView, XibInitializable {
     
-    @IBInspectable var titleImage: UIImage = UIImage() {
+    @IBInspectable var leftImage: UIImage = UIImage() {
         didSet {
-            backButton.setImage(titleImage, for: .normal)
+            leftButton.setImage(leftImage, for: .normal)
         }
     }
     
@@ -22,7 +22,14 @@ final class BaseNavigationBarView: UIView, XibInitializable {
         }
     }
     
-    var actionHandler: ((UIButton) -> Void)?
+    @IBInspectable var rightImage: UIImage = UIImage() {
+        didSet {
+            rightButton.setImage(rightImage, for: .normal)
+        }
+    }
+    
+    var leftActionHandler: ((UIButton) -> Void)?
+    var rightActionHandler: ((UIButton) -> Void)?
         
     private lazy var topToSuperviewConstraint: NSLayoutConstraint = {
         return containerView.topAnchor.constraint(equalTo: containerView.superview!.topAnchor)
@@ -32,9 +39,11 @@ final class BaseNavigationBarView: UIView, XibInitializable {
     
     @IBOutlet private var containerView: UIView!
     
-    @IBOutlet private var backButton: UIButton!
+    @IBOutlet private var leftButton: UIButton!
     
     @IBOutlet private var titleLabel: BrandLabel!
+    
+    @IBOutlet private var rightButton: UIButton!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -49,11 +58,16 @@ final class BaseNavigationBarView: UIView, XibInitializable {
     private func setup() {
         loadFromXib()
         
-        backButton.addTarget(self, action: #selector(actionBackButtonTapped(sender:)), for: .touchUpInside)
+        leftButton.addTarget(self, action: #selector(actionLeftButtonTapped(sender:)), for: .touchUpInside)
+        rightButton.addTarget(self, action: #selector(actionRightButtonTapped(sender:)), for: .touchUpInside)
     }
     
-    @objc private func actionBackButtonTapped(sender: UIButton) {
-        actionHandler?(sender)
+    @objc private func actionLeftButtonTapped(sender: UIButton) {
+        leftActionHandler?(sender)
+    }
+    
+    @objc private func actionRightButtonTapped(sender: UIButton) {
+        rightActionHandler?(sender)
     }
     
     func attachToSuperview(in viewController: UIViewController, adjustSafeAreaInset: Bool = true) {

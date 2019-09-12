@@ -52,7 +52,7 @@ extension CartInteractorDefault: CartInteractor {
     }
     
     func openBeverage() {
-        presenter.openBeverage()
+        presenter.openBeverage(with: appManager)
     }
     
     func removeFromCart(_ purchase: BasePurchasableViewModel) {

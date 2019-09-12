@@ -12,8 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BaseNavigationBarView" customModule="NennosPizza" customModuleProvider="target">
             <connections>
-                <outlet property="backButton" destination="9uk-zD-oeb" id="kz9-2G-cAj"/>
                 <outlet property="containerView" destination="vu7-rS-a9o" id="z0T-hp-6oo"/>
+                <outlet property="leftButton" destination="9uk-zD-oeb" id="o9t-QG-hdf"/>
+                <outlet property="rightButton" destination="6kp-B5-k9m" id="yHH-aC-jLB"/>
                 <outlet property="titleLabel" destination="DEx-cj-YWd" id="odS-VT-4ID"/>
                 <outlet property="topContainerConstraint" destination="bUi-J9-v6B" id="PQB-Ms-Yyh"/>
             </connections>
@@ -43,13 +44,23 @@
                             <color key="tintColor" red="0.89803921568627454" green="0.38039215686274508" blue="0.3529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <inset key="imageEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6kp-B5-k9m">
+                            <rect key="frame" x="354" y="0.0" width="60" height="44"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="4D2-Cb-Qop"/>
+                            </constraints>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="16" maxY="0.0"/>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="44" id="4Sc-Nk-8Bc"/>
                         <constraint firstItem="DEx-cj-YWd" firstAttribute="centerX" secondItem="vu7-rS-a9o" secondAttribute="centerX" id="Gcf-H5-7pH"/>
+                        <constraint firstItem="6kp-B5-k9m" firstAttribute="top" secondItem="vu7-rS-a9o" secondAttribute="top" id="ICG-WR-3hi"/>
+                        <constraint firstAttribute="bottom" secondItem="6kp-B5-k9m" secondAttribute="bottom" id="NYQ-L3-fek"/>
                         <constraint firstItem="9uk-zD-oeb" firstAttribute="leading" secondItem="vu7-rS-a9o" secondAttribute="leading" id="NdF-q8-6MC"/>
                         <constraint firstAttribute="bottom" secondItem="9uk-zD-oeb" secondAttribute="bottom" id="Wgq-Z1-gs4"/>
+                        <constraint firstAttribute="trailing" secondItem="6kp-B5-k9m" secondAttribute="trailing" id="e8l-Xh-QUA"/>
                         <constraint firstItem="9uk-zD-oeb" firstAttribute="top" secondItem="vu7-rS-a9o" secondAttribute="top" id="r3j-lU-SEy"/>
                         <constraint firstItem="DEx-cj-YWd" firstAttribute="centerY" secondItem="vu7-rS-a9o" secondAttribute="centerY" id="xDL-uC-wgi"/>
                     </constraints>
@@ -77,7 +88,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="137.59999999999999" y="152.92353823088456"/>
+            <point key="canvasLocation" x="137.59999999999999" y="152.47376311844079"/>
         </view>
     </objects>
 </document>

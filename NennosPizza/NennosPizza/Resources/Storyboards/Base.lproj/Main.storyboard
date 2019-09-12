@@ -22,8 +22,8 @@
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="ic_cart_navbar"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="NENNO'S PIZZA"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic_cart_navbar"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-xT-ZjA">
@@ -63,9 +63,11 @@
                             <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="fTR-4J-wh9" customClass="BaseNavigationBarView" customModule="NennosPizza" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.8980392157" green="0.3803921569" blue="0.35294117650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="ic_back"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="title" value="CART"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic_back"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="rightImage" value="ic_drinks"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3DZ-d2-BzI">
@@ -110,48 +112,44 @@
             </objects>
             <point key="canvasLocation" x="1008.8" y="-403.44827586206901"/>
         </scene>
-        <!--View Controller-->
+        <!--Beverage View Controller-->
         <scene sceneID="MnZ-1L-dx6">
             <objects>
-                <viewController id="ZPY-Xt-fnt" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="beverageVC" id="ZPY-Xt-fnt" customClass="BeverageViewController" customModule="NennosPizza" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Bpb-Wf-1Tg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="uMq-8z-Dp3">
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="uMq-8z-Dp3" customClass="BaseNavigationBarView" customModule="NennosPizza" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="DRINKS"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="titleImage" value="ic_back"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="leftImage" value="ic_back"/>
+                                </userDefinedRuntimeAttributes>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-Is-DNc">
-                                <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wMZ-Is-DNc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUw-zn-Y7N" customClass="BrandActionButton" customModule="NennosPizza" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="623" width="375" height="44"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="gku-er-uPz"/>
-                                </constraints>
-                                <state key="normal" title="ADD TO CART"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="settableButtonColor" value="red"/>
-                                </userDefinedRuntimeAttributes>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dUw-zn-Y7N" firstAttribute="leading" secondItem="xej-MD-aMa" secondAttribute="leading" id="1gM-nd-Psb"/>
-                            <constraint firstItem="dUw-zn-Y7N" firstAttribute="bottom" secondItem="xej-MD-aMa" secondAttribute="bottom" id="2AI-AZ-poV"/>
                             <constraint firstItem="wMZ-Is-DNc" firstAttribute="top" secondItem="uMq-8z-Dp3" secondAttribute="bottom" id="2Jd-3K-GH5"/>
                             <constraint firstItem="uMq-8z-Dp3" firstAttribute="trailing" secondItem="xej-MD-aMa" secondAttribute="trailing" id="2nX-Ni-miQ"/>
-                            <constraint firstItem="dUw-zn-Y7N" firstAttribute="top" secondItem="wMZ-Is-DNc" secondAttribute="bottom" id="5eJ-ci-fwB"/>
+                            <constraint firstItem="wMZ-Is-DNc" firstAttribute="bottom" secondItem="xej-MD-aMa" secondAttribute="bottom" id="3SO-bP-BRg"/>
                             <constraint firstItem="wMZ-Is-DNc" firstAttribute="trailing" secondItem="xej-MD-aMa" secondAttribute="trailing" id="NO9-WP-aAY"/>
                             <constraint firstItem="uMq-8z-Dp3" firstAttribute="leading" secondItem="xej-MD-aMa" secondAttribute="leading" id="Nxf-3B-zUF"/>
                             <constraint firstItem="uMq-8z-Dp3" firstAttribute="top" secondItem="xej-MD-aMa" secondAttribute="top" id="agf-Fb-j7Y"/>
-                            <constraint firstItem="dUw-zn-Y7N" firstAttribute="trailing" secondItem="xej-MD-aMa" secondAttribute="trailing" id="ogz-uc-DTM"/>
                             <constraint firstItem="wMZ-Is-DNc" firstAttribute="leading" secondItem="xej-MD-aMa" secondAttribute="leading" id="rqT-kD-uBc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xej-MD-aMa"/>
                     </view>
+                    <connections>
+                        <outlet property="navigationBar" destination="uMq-8z-Dp3" id="6W3-ed-jog"/>
+                        <outlet property="tableView" destination="wMZ-Is-DNc" id="wNP-Kp-Fip"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUU-4M-QjY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,5 +159,6 @@
     <resources>
         <image name="ic_back" width="24" height="24"/>
         <image name="ic_cart_navbar" width="24" height="24"/>
+        <image name="ic_drinks" width="24" height="24"/>
     </resources>
 </document>

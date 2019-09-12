@@ -59,8 +59,11 @@ class CartViewController: BaseViewController {
     
     private func setupNavigationBar() {
         navigationBar.attachToSafeArea(in: self)
-        navigationBar.actionHandler = { [weak self] _ in
+        navigationBar.leftActionHandler = { [weak self] _ in
             self?.interactor?.moveBack()
+        }
+        navigationBar.rightActionHandler = { [weak self] _ in
+            self?.interactor?.openBeverage()
         }
     }
     

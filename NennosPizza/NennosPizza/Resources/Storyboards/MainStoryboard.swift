@@ -18,4 +18,8 @@ enum MainStoryboard {
     static func createCartViewController() -> CartViewController {
         return storyboard.instantiateViewController(withIdentifier: "cartVC") as! CartViewController
     }
+    
+    static func createBeverageViewController() -> BeverageViewController {
+        return storyboard.instantiateViewController(withIdentifier: "beverageVC") as! BeverageViewController
+    }
 }

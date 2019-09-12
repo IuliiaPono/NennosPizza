@@ -73,6 +73,9 @@
 		312AF5452326862A00FED45F /* BrandView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF5442326862A00FED45F /* BrandView.swift */; };
 		312AF547232686F900FED45F /* BrandActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF546232686F900FED45F /* BrandActionButton.swift */; };
 		31601A2B232A810B00CEBBBC /* BeaverageCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31601A2A232A810B00CEBBBC /* BeaverageCoordinator.swift */; };
+		31601A2D232A82DF00CEBBBC /* BeverageInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31601A2C232A82DF00CEBBBC /* BeverageInteractor.swift */; };
+		31601A2F232A82EE00CEBBBC /* BeveragePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31601A2E232A82EE00CEBBBC /* BeveragePresenter.swift */; };
+		31601A31232A830300CEBBBC /* BeverageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31601A30232A830300CEBBBC /* BeverageViewController.swift */; };
 		31AC08DB2326905100D1B8DA /* PizzaLoader.json in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08DA2326905100D1B8DA /* PizzaLoader.json */; };
 		31AC08DF23269DC600D1B8DA /* BaseNavigationBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08DE23269DC600D1B8DA /* BaseNavigationBarView.xib */; };
 		31AC08E12326A0E500D1B8DA /* PizzaBasicTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 31AC08E02326A0E500D1B8DA /* PizzaBasicTableViewCell.xib */; };
@@ -180,6 +183,9 @@
 		312AF5442326862A00FED45F /* BrandView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandView.swift; sourceTree = "<group>"; };
 		312AF546232686F900FED45F /* BrandActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandActionButton.swift; sourceTree = "<group>"; };
 		31601A2A232A810B00CEBBBC /* BeaverageCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeaverageCoordinator.swift; sourceTree = "<group>"; };
+		31601A2C232A82DF00CEBBBC /* BeverageInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageInteractor.swift; sourceTree = "<group>"; };
+		31601A2E232A82EE00CEBBBC /* BeveragePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeveragePresenter.swift; sourceTree = "<group>"; };
+		31601A30232A830300CEBBBC /* BeverageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeverageViewController.swift; sourceTree = "<group>"; };
 		31AC08DA2326905100D1B8DA /* PizzaLoader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = PizzaLoader.json; sourceTree = "<group>"; };
 		31AC08DE23269DC600D1B8DA /* BaseNavigationBarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BaseNavigationBarView.xib; sourceTree = "<group>"; };
 		31AC08E02326A0E500D1B8DA /* PizzaBasicTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PizzaBasicTableViewCell.xib; sourceTree = "<group>"; };
@@ -529,7 +535,7 @@
 		310350432327E561001828BE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				31601A25232A809900CEBBBC /* Drinks */,
+				31601A25232A809900CEBBBC /* Beverage */,
 				31FE69EB232A36C40010D02D /* Cart */,
 				3103501A2327CE52001828BE /* Base */,
 				310350122327C8FD001828BE /* Pizzas */,
@@ -729,7 +735,7 @@
 			path = "Xib Views";
 			sourceTree = "<group>";
 		};
-		31601A25232A809900CEBBBC /* Drinks */ = {
+		31601A25232A809900CEBBBC /* Beverage */ = {
 			isa = PBXGroup;
 			children = (
 				31601A26232A80C700CEBBBC /* Coordinator */,
@@ -737,7 +743,7 @@
 				31601A27232A80D000CEBBBC /* Presenter */,
 				31601A29232A80E400CEBBBC /* View */,
 			);
-			path = Drinks;
+			path = Beverage;
 			sourceTree = "<group>";
 		};
 		31601A26232A80C700CEBBBC /* Coordinator */ = {
@@ -751,6 +757,7 @@
 		31601A27232A80D000CEBBBC /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				31601A2E232A82EE00CEBBBC /* BeveragePresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -758,6 +765,7 @@
 		31601A28232A80DA00CEBBBC /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				31601A2C232A82DF00CEBBBC /* BeverageInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -765,6 +773,7 @@
 		31601A29232A80E400CEBBBC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31601A30232A830300CEBBBC /* BeverageViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1108,6 +1117,7 @@
 				31034FFB2327B9C1001828BE /* HttpError.swift in Sources */,
 				310350332327D4F0001828BE /* Router+LoaderView.swift in Sources */,
 				31FE6A14232A559C0010D02D /* BasePurcasableViewCell.swift in Sources */,
+				31601A2F232A82EE00CEBBBC /* BeveragePresenter.swift in Sources */,
 				31FE6A06232A42EA0010D02D /* NotificationsCenter.swift in Sources */,
 				310350392327DCF0001828BE /* PizzasPresenter.swift in Sources */,
 				31220935232914B4001471F9 /* BaseNavigationBarView.swift in Sources */,
@@ -1149,6 +1159,7 @@
 				31034FB823277B58001828BE /* AccessibilityDisplayFunction.swift in Sources */,
 				31034FF12327B6C7001828BE /* DictionaryDecoder.swift in Sources */,
 				310350492327E951001828BE /* PizzaBasicTableViewCell.swift in Sources */,
+				31601A31232A830300CEBBBC /* BeverageViewController.swift in Sources */,
 				31034FAF23277A8C001828BE /* TableViewDataAdapter.swift in Sources */,
 				3103500A2327C098001828BE /* BackendPizzasObject.swift in Sources */,
 				31034FEA2327A4B5001828BE /* Pizza.swift in Sources */,
@@ -1158,6 +1169,7 @@
 				310350042327BF1E001828BE /* BackendService.swift in Sources */,
 				310350242327D153001828BE /* Interactor.swift in Sources */,
 				31034FE62327A44D001828BE /* Purchasable.swift in Sources */,
+				31601A2D232A82DF00CEBBBC /* BeverageInteractor.swift in Sources */,
 				31601A2B232A810B00CEBBBC /* BeaverageCoordinator.swift in Sources */,
 				31FE69E6232A2ED40010D02D /* PurchaseBanner.swift in Sources */,
 				3103502B2327D237001828BE /* BaseInteractor.swift in Sources */,

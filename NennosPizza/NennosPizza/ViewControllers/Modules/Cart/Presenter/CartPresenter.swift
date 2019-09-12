@@ -10,7 +10,7 @@ import UIKit
 
 protocol CartPresenter: Presenter, BannerPresentable {
     func presentPurchases(_ purchases: [Purchasable])
-    func openBeverage()
+    func openBeverage(with appManager: AppManager)
     func moveBack()
 }
 
@@ -42,8 +42,8 @@ extension CartPresenterDefault: CartPresenter {
         view?.display(viewModels, totalPrice: stringTotalPrice)
     }
     
-    func openBeverage() {
-//        router.push(DrinksAssembly.createModule())
+    func openBeverage(with appManager: AppManager) {
+        router.push(BeverageCoordinator.createModule(with: appManager))
     }
     
     func moveBack() {
