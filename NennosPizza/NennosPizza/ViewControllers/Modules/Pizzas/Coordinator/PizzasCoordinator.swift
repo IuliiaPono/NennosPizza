@@ -8,19 +8,15 @@
 
 import UIKit
 
-class PizzaCoordinator: BaseCoordinator<PizzasViewController> {
-    override class func createModule() -> PizzasViewController {
+class PizzaCoordinator: BaseCoordinator<PizzasViewController>  {
+    override class func createModule(with appManager: AppManager) -> PizzasViewController {
         let viewController: PizzasViewController = MainStoryboard.createPizzasViewController()
-        
-        let imageDownloader = ImageDownloaderDefault()
         
         let router = Router(viewController: viewController)
         
-        let presenter = PizzasPresenterDefault(router: router, view: viewController, imageDownloader: imageDownloader)
+        let presenter = PizzasPresenterDefault(router: router, view: viewController)
         
-        let foodService = FoodBackendServiceDefault()
-        
-        let interactor = PizzasInteractorDefault(presenter: presenter, foodBackendService: foodService)
+        let interactor = PizzasInteractorDefault(presenter: presenter, appManager: appManager)
         
         viewController.interactor = interactor
         

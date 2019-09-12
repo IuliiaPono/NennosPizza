@@ -11,44 +11,46 @@ import PromiseKit
 
 protocol PizzasInteractor: Interactor {
     func getPizzasList()
-    func openBasket()
+    func openCart()
     func addToCart(_ pizza: PizzaBasicCellViewModel)
     func openDetails(_ pizza: PizzaBasicCellViewModel)
 }
 
 class PizzasInteractorDefault: BaseInteractor {
     private let presenter: PizzasPresenter
-    private let foodBackendService: FoodBackendService
-    private let imageDownloader: ImageDownloader
+    private let appManager: AppManager
     
     private var pizzas: [Pizza]?
     
-    init(presenter: PizzasPresenter, foodBackendService: FoodBackendService) {
+    init(presenter: PizzasPresenter, appManager: AppManager) {
         self.presenter = presenter
-        self.foodBackendService = foodBackendService
-        self.imageDownloader = ImageDownloaderDefault()
+        self.appManager = appManager
+        
+        super.init()
     }
 }
 
 extension PizzasInteractorDefault: PizzasInteractor {
     func getPizzasList() {
         presenter.showLoadingView()
-        _ = foodBackendService.getIngredients().then { ingredients in
-            return self.foodBackendService.getPizzas(ingredients: ingredients)
+        _ = appManager.foodService.getIngredients().then { ingredients in
+            return self.appManager.foodService.getPizzas(ingredients: ingredients)
         }.done { [weak self] pizzas in
-            self?.pizzas = pizzas
-            self?.presenter.displayPizzas(pizzas)
+            guard let self = self else { return }
+            self.pizzas = pizzas
+            self.presenter.displayPizzas(pizzas, imageLoader: self.appManager.imageDownloader)
         }
     }
     
-    func openBasket() {
-        
+    func openCart() {
+        presenter.openCart(with: appManager)
     }
     
     func addToCart(_ pizza: PizzaBasicCellViewModel) {
         guard let pizza = pizzas?.first(where: { pizza.name == $0.name }) else { return }
         
-        //
+        appManager.cartStorageService.addPurchase(pizza)
+        presenter.showAddToCartBanner()
     }
     
     func openDetails(_ pizza: PizzaBasicCellViewModel) {

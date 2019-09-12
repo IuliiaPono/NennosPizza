@@ -10,7 +10,7 @@ import Foundation
 
 class BaseCoordinator<VС: BaseViewController> {
     
-    class func createModule() -> VС {
+    class func createModule(with appManager: AppManager) -> VС {
         return VС()
     }
 }

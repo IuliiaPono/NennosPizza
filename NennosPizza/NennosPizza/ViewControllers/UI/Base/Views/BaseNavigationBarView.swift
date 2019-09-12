@@ -13,7 +13,6 @@ final class BaseNavigationBarView: UIView, XibInitializable {
     @IBInspectable var titleImage: UIImage = UIImage() {
         didSet {
             backButton.setImage(titleImage, for: .normal)
-            //backButton.setImage(UIImage(named: "common_button_back")?.withRenderingMode(.alwaysTemplate), for: .normal)
         }
     }
     
@@ -24,9 +23,7 @@ final class BaseNavigationBarView: UIView, XibInitializable {
     }
     
     var actionHandler: ((UIButton) -> Void)?
-    
-    // MARK: - Views
-    
+        
     private lazy var topToSuperviewConstraint: NSLayoutConstraint = {
         return containerView.topAnchor.constraint(equalTo: containerView.superview!.topAnchor)
     }()

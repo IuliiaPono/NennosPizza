@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+import UIKit
+
+extension Router {
+    
+    private static let purchaseBanner = PurchaseBanner()
+    
+    func presentBanner() {
+        Router.purchaseBanner.show()
+    }
+}

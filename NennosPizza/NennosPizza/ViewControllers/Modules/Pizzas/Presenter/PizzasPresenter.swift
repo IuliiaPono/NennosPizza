@@ -8,34 +8,30 @@
 
 import UIKit
 
-protocol PizzasPresenter: Presenter {
-    func displayPizzas(_ pizzas: [Pizza])
+protocol PizzasPresenter: Presenter, BannerPresentable {
+    func displayPizzas(_ pizzas: [Pizza], imageLoader: ImageDownloader)
+    func openCart(with appManager: AppManager)
 }
 
 class PizzasPresenterDefault: BasePresenter, PizzasPresenter {
     private weak var view: PizzasViewInput?
     
-    let imageDownloader: ImageDownloader
-    
-    init(router: Router, view: PizzasViewInput?, imageDownloader: ImageDownloader) {
-        self.imageDownloader = imageDownloader
-        
+    init(router: Router, view: PizzasViewInput?) {
         super.init(router: router)
         
         self.view = view
     }
     
-    func displayPizzas(_ pizzas: [Pizza]) {
+    func displayPizzas(_ pizzas: [Pizza], imageLoader: ImageDownloader) {
         let pizzaModels = pizzas.map { pizza -> PizzaBasicCellViewModel in
             let ingredients = ingredientsString(from: pizza.ingredients)
-            let basePrice = "$" + "\(pizza.basePrice)"
             
             return PizzaBasicCellViewModel(
                 name: pizza.name,
                 ingredients: ingredients,
                 imageURL: pizza.imageUrl,
-                basePrice: basePrice,
-                imageDownloader: imageDownloader,
+                basePrice: pizza.price.priceString(),
+                imageDownloader: imageLoader,
                 purchaseHandler: { pizzaModel in
                     self.view?.addPurchaseToCart(with: pizzaModel)
                 }
@@ -43,6 +39,10 @@ class PizzasPresenterDefault: BasePresenter, PizzasPresenter {
         }
         hideLoadingView()
         view?.display(pizzaModels)
+    }
+    
+    func openCart(with appManager: AppManager) {
+        router.push(CartCoordinator.createModule(with: appManager))
     }
     
     private func ingredientsString(from ingredients: [Ingredient]) -> String {

@@ -53,14 +53,15 @@
                                 </userDefinedRuntimeAttributes>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKe-YD-gOW">
-                                <rect key="frame" x="328" y="15.5" width="70" height="30"/>
+                                <rect key="frame" x="320" y="15.5" width="78" height="30"/>
                                 <color key="backgroundColor" red="0.99607843137254903" green="0.80392156862745101" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="CFd-HW-e5z"/>
+                                    <constraint firstAttribute="width" constant="78" id="CFd-HW-e5z"/>
                                     <constraint firstAttribute="height" constant="30" id="xMb-ph-2Az"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="4" maxY="0.0"/>
                                 <state key="normal" title="$10" image="ic_cart_button">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -86,7 +87,7 @@
                             <constraint firstItem="knx-1c-IgN" firstAttribute="top" secondItem="upS-eU-MGS" secondAttribute="bottom" constant="4" id="S4H-Bb-z7g"/>
                             <constraint firstAttribute="trailing" secondItem="FQe-ih-wAb" secondAttribute="trailing" id="WDN-18-p4L"/>
                             <constraint firstItem="upS-eU-MGS" firstAttribute="top" secondItem="uAK-bN-JX1" secondAttribute="top" constant="8" id="dl0-Pe-bal"/>
-                            <constraint firstItem="knx-1c-IgN" firstAttribute="trailing" secondItem="CKe-YD-gOW" secondAttribute="leading" constant="-16" id="eQA-kS-yg1"/>
+                            <constraint firstItem="knx-1c-IgN" firstAttribute="trailing" secondItem="CKe-YD-gOW" secondAttribute="leading" constant="-8" id="eQA-kS-yg1"/>
                             <constraint firstItem="FQe-ih-wAb" firstAttribute="top" secondItem="uAK-bN-JX1" secondAttribute="top" id="ecR-Vq-t2H"/>
                             <constraint firstAttribute="trailing" secondItem="CKe-YD-gOW" secondAttribute="trailing" constant="16" id="o4v-wL-4aM"/>
                             <constraint firstAttribute="bottom" secondItem="FQe-ih-wAb" secondAttribute="bottom" id="zqW-Sx-NJZ"/>

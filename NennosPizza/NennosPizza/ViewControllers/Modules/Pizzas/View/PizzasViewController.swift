@@ -45,10 +45,10 @@ class PizzasViewController: BaseViewController {
         refreshControl.addTarget(self, action: #selector(refreshData), for: .valueChanged)
     }
     
-    func setupNavigationBar() {
+    private func setupNavigationBar() {
         navigationBar.attachToSafeArea(in: self)
         navigationBar.actionHandler = { [weak self] _ in
-            self?.interactor?.openBasket()
+            self?.interactor?.openCart()
         }
     }
     
@@ -65,6 +65,7 @@ extension PizzasViewController: PizzasViewInput {
     func display(_ pizzaModels: [PizzaBasicCellViewModel]) {
         tableViewAdapter.data = pizzaModels
         tableView.reloadData()
+        refreshControl.endRefreshing()
     }
 }
 

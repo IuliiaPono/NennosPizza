@@ -9,7 +9,7 @@
 import UIKit
 import Lottie
 
-class PizzaLoadingView: UIView {
+final class PizzaLoadingView: UIView {
     private let animationView = AnimationView()
     
     private let insets: CGFloat = 48

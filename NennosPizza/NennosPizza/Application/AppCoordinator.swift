@@ -13,8 +13,11 @@ final class AppCoordinator {
     
     private let navigation: UINavigationController
     
-    init(window: UIWindow) {
+    private let appManager: AppManager
+    
+    init(window: UIWindow, appManager: AppManager) {
         self.window = window
+        self.appManager = appManager
         
         let navigation = UINavigationController()
         navigation.isNavigationBarHidden = true
@@ -23,7 +26,7 @@ final class AppCoordinator {
     
     func start() {
         window.rootViewController = navigation
-        let pizzaViewController = PizzaCoordinator.createModule()
+        let pizzaViewController = PizzaCoordinator.createModule(with: appManager)
         navigation.fade(to: [pizzaViewController])
     }
 }
