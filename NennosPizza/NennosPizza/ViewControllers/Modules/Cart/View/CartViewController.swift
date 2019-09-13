@@ -18,6 +18,8 @@ class CartViewController: BaseViewController {
     
     @IBOutlet private var navigationBar: BaseNavigationBarView!
     
+    @IBOutlet private var checkoutButton: BrandActionButton!
+    
     var viewModels: [AnyCellViewModel.Type] {
         return [
             BasePurchasableViewModel.self
@@ -72,7 +74,7 @@ class CartViewController: BaseViewController {
     }
     
     @IBAction private func doCheckout() {
-        
+        interactor?.checkout()
     }
 }
 
@@ -81,6 +83,8 @@ extension CartViewController: CartViewInput {
         tableViewAdapter.data = cartModels
         
         cartFooterView.updateSum(with: totalPrice)
+        
+        checkoutButton.isEnabled = cartModels.count > 0
         
         tableView.reloadData()
         refreshControl.endRefreshing()

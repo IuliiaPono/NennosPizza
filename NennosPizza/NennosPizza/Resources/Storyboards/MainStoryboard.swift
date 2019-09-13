@@ -22,4 +22,8 @@ enum MainStoryboard {
     static func createBeverageViewController() -> BeverageViewController {
         return storyboard.instantiateViewController(withIdentifier: "beverageVC") as! BeverageViewController
     }
+    
+    static func createGratitudeViewController() -> GratitudeViewController {
+        return storyboard.instantiateViewController(withIdentifier: "gratitudeVC") as! GratitudeViewController
+    }
 }

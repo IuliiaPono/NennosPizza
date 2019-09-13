@@ -6,8 +6,6 @@
 //  Copyright © 2019 Iuliia Ponomareva. All rights reserved.
 //
 
-import Foundation
-
 import UIKit
 import PromiseKit
 
@@ -15,6 +13,7 @@ protocol CartInteractor: Interactor {
     func getPurchases()
     func openBeverage()
     func removeFromCart(_ purchase: BasePurchasableViewModel)
+    func checkout()
     func moveBack()
 }
 
@@ -53,6 +52,19 @@ extension CartInteractorDefault: CartInteractor {
     
     func openBeverage() {
         presenter.openBeverage(with: appManager)
+    }
+    
+    func checkout() {
+        presenter.showLoadingView()
+//        _ = appManager.cartService.orderFood(purchases: purchases ?? [])
+//        .done { [weak self] in
+//            guard let self = self else { return }
+//
+            self.presenter.openGratitude(with: self.appManager)
+//        }
+//        .catch({ [weak self] _ in
+//            self?.presenter.hideLoadingView()
+//        })
     }
     
     func removeFromCart(_ purchase: BasePurchasableViewModel) {

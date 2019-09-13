@@ -8,8 +8,16 @@
 
 import Foundation
 
-struct BackendPizzaObject: Codable, Equatable {
+struct BackendPizzaObject: Codable, JSONSerializaber, Equatable {
     let name: String
-    let ingredients: [Int64]
+    let ingredients: [Int]
     let imageUrl: String?
+    
+    var container: Any {
+        return [
+            "name": name,
+            "ingredients": ingredients,
+            "imageURL": imageUrl
+        ]
+    }
 }

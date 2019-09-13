@@ -1,0 +1,22 @@
+{
+    "basePrice": 4,
+    "pizzas": [
+        {
+            "ingredients": [
+                1,
+                5,
+                6
+            ],
+            "name": "Primavera",
+            "imageUrl": "https://i.ibb.co/XD5kYNd/primavera.png"
+        },
+        {
+            "ingredients": [
+                1,
+                9,
+                10
+            ],
+            "name": "Mare Bianco"
+        }
+    ]
+}

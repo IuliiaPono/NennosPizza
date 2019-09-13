@@ -30,6 +30,7 @@ private struct BrandViewConfig {
         case "redSemiTransparent": return BrandViewConfig(bgColor: .red, alpha: 0.8)
         case "whiteSemiTransparent": return BrandViewConfig(bgColor: .white, alpha: 0.8)
         case "lightGray": return BrandViewConfig(bgColor: .lightGray, alpha: 1.0)
+        case "red": return BrandViewConfig(bgColor: .red, alpha: 1.0)
         default: return nil
         }
     }

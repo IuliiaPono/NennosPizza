@@ -46,6 +46,10 @@ extension Router {
         viewController?.navigationController?.popToViewController(destinationView, animated: true)
     }
     
+    func popToRoot() {
+        viewController?.navigationController?.popToRootViewController(animated: true)
+    }
+    
     func pop() {
         viewController?.navigationController?.popViewController(animated: true)
     }

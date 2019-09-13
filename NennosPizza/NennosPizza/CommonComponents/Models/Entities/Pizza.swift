@@ -18,3 +18,11 @@ struct Pizza: Purchasable, Codable, Equatable {
         return basePrice + ingredients.map { $0.price }.reduce(0, +)
     }
 }
+
+extension Pizza {
+    var rawPizza: BackendPizzaObject {
+        let ingredients = self.ingredients.values(of: \.id)
+        return BackendPizzaObject(name: name, ingredients: ingredients, imageUrl: imageUrl)
+    }
+}
+
