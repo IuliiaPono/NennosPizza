@@ -56,15 +56,15 @@ extension CartInteractorDefault: CartInteractor {
     
     func checkout() {
         presenter.showLoadingView()
-//        _ = appManager.cartService.orderFood(purchases: purchases ?? [])
-//        .done { [weak self] in
-//            guard let self = self else { return }
-//
+        _ = appManager.cartService.orderFood(purchases: purchases ?? [])
+        .done { [weak self] in
+            guard let self = self else { return }
+
             self.presenter.openGratitude(with: self.appManager)
-//        }
-//        .catch({ [weak self] _ in
-//            self?.presenter.hideLoadingView()
-//        })
+        }
+        .catch({ [weak self] _ in
+            self?.presenter.hideLoadingView()
+        })
     }
     
     func removeFromCart(_ purchase: BasePurchasableViewModel) {
