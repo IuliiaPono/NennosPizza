@@ -43,7 +43,7 @@ class DefaultPizzasPresenter: BasePresenter, PizzasPresenter {
     }
     
     func openCart(with applicationContext: ApplicationContext) {
-        router.push(CartCoordinator.createModule(with: applicationContext))
+        router.push(.cart, with: applicationContext)
     }
     
     private func ingredientsString(from ingredients: [Ingredient]) -> String {

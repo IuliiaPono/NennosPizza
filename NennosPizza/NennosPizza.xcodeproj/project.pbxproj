@@ -66,6 +66,7 @@
 		310350412327E542001828BE /* PizzaBasicCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350402327E542001828BE /* PizzaBasicCellViewModel.swift */; };
 		310350462327E7E5001828BE /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350452327E7E4001828BE /* Router.swift */; };
 		310350492327E951001828BE /* PizzaBasicTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350482327E951001828BE /* PizzaBasicTableViewCell.swift */; };
+		3116F288232F88F7003751DE /* Router+ControllersEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3116F287232F88F7003751DE /* Router+ControllersEnum.swift */; };
 		3122092E2328D344001471F9 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122092D2328D344001471F9 /* ImageDownloader.swift */; };
 		3122093123290F8A001471F9 /* PizzaLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093023290F8A001471F9 /* PizzaLoadingView.swift */; };
 		31220935232914B4001471F9 /* BaseNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31220934232914B4001471F9 /* BaseNavigationBarView.swift */; };
@@ -187,6 +188,7 @@
 		310350402327E542001828BE /* PizzaBasicCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaBasicCellViewModel.swift; sourceTree = "<group>"; };
 		310350452327E7E4001828BE /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		310350482327E951001828BE /* PizzaBasicTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaBasicTableViewCell.swift; sourceTree = "<group>"; };
+		3116F287232F88F7003751DE /* Router+ControllersEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Router+ControllersEnum.swift"; sourceTree = "<group>"; };
 		3122092D2328D344001471F9 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		3122093023290F8A001471F9 /* PizzaLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLoadingView.swift; sourceTree = "<group>"; };
 		31220934232914B4001471F9 /* BaseNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBarView.swift; sourceTree = "<group>"; };
@@ -621,6 +623,7 @@
 				310350452327E7E4001828BE /* Router.swift */,
 				310350302327D479001828BE /* Router+PurchaseBanner.swift */,
 				310350322327D4F0001828BE /* Router+LoaderView.swift */,
+				3116F287232F88F7003751DE /* Router+ControllersEnum.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -1258,6 +1261,7 @@
 				31034FC223277F80001828BE /* UIView+AttachmentToParent.swift in Sources */,
 				310350102327C2FE001828BE /* BackendRequestPath.swift in Sources */,
 				312AF53C23267D8600FED45F /* BrandColor.swift in Sources */,
+				3116F288232F88F7003751DE /* Router+ControllersEnum.swift in Sources */,
 				310350412327E542001828BE /* PizzaBasicCellViewModel.swift in Sources */,
 				3122094D23294A00001471F9 /* ApplicationContext.swift in Sources */,
 				310350212327CECD001828BE /* BaseViewController.swift in Sources */,

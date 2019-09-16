@@ -47,11 +47,11 @@ extension DefaultCartPresenter: CartPresenter {
     
     func openGratitude(with applicationContext: ApplicationContext) {
         hideLoadingView()
-        router.push(GratitudeCoordinator.createModule(with: applicationContext))
+        router.push(.gratitude, with: applicationContext)
     }
     
     func openBeverage(with applicationContext: ApplicationContext) {
-        router.push(BeverageCoordinator.createModule(with: applicationContext))
+        router.push(.beverage, with: applicationContext)
     }
     
     func moveBack() {
