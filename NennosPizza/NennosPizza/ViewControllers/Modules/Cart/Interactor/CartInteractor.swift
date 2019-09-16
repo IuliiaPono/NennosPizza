@@ -60,6 +60,7 @@ extension DefaultCartInteractor: CartInteractor {
         .done { [weak self] in
             guard let self = self else { return }
 
+            self.applicationContext.cartStorageService.removePurchases()
             self.presenter.openGratitude(with: self.applicationContext)
         }
         .catch({ [weak self] _ in
