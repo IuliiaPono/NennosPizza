@@ -24,9 +24,9 @@ PODS:
 
 DEPENDENCIES:
   - Alamofire (= 4.8.1)
-  - AlamofireNetworkActivityIndicator
+  - AlamofireNetworkActivityIndicator (= 2.4)
   - lottie-ios (= 3.0.4)
-  - NotificationBannerSwift
+  - NotificationBannerSwift (= 2.5.1)
   - Nuke (= 7.6.2)
   - PromiseKit (= 6.8.4)
   - PromiseKit/Alamofire (= 6.8.4)
@@ -52,6 +52,6 @@ SPEC CHECKSUMS:
   PromiseKit: 51794a832647e7b819336dc2279039ce9f1cc49b
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
 
-PODFILE CHECKSUM: 8fb4c24f17594644e15d2ca83c261c5e9b822bbd
+PODFILE CHECKSUM: ba8a546c0bf55209406151b1dcb2703bcf42cabc
 
 COCOAPODS: 1.6.1

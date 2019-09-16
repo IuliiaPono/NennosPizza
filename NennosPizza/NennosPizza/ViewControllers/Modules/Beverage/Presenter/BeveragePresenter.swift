@@ -13,7 +13,7 @@ protocol BeveragePresenter: Presenter, BannerPresentable {
     func moveBack()
 }
 
-class BeveragePresenterDefault: BasePresenter {
+class DefaultBeveragePresenter: BasePresenter {
     private weak var view: BeverageViewInput?
     
     init(router: Router, view: BeverageViewInput?) {
@@ -23,7 +23,7 @@ class BeveragePresenterDefault: BasePresenter {
     }
 }
 
-extension BeveragePresenterDefault: BeveragePresenter {
+extension DefaultBeveragePresenter: BeveragePresenter {
     func displayBeverage(_ beverage: [Beverage]) {
         let viewModels = beverage.map { drink -> BasePurchasableViewModel in
             return BasePurchasableViewModel(

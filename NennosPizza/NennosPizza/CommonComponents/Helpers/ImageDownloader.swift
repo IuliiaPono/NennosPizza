@@ -13,7 +13,7 @@ protocol ImageDownloader {
     func loadImage(from url: String, into imageView: UIImageView, defaultImageName: String)
 }
 
-class ImageDownloaderDefault: ImageDownloader {
+class DefaultImageDownloader: ImageDownloader {
     func loadImage(from url: String, into imageView: UIImageView, defaultImageName: String) {
         guard let url = URL(string: url), let request = try? URLRequest(url: url, method: .get) else { return }
         

@@ -1,5 +1,5 @@
 //
-//  NotificationContextDefault.swift
+//  DefaultNotificationContext.swift
 //  NennosPizza
 //
 //  Created by Iuliia Ponomareva on 12/09/2019.
@@ -8,13 +8,13 @@
 
 import Foundation
 
-class NotificationContextDefault: NotificationContext {
+class DefaultNotificationContext: NotificationContext {
     
     fileprivate let token: NSObjectProtocol
-    private weak var center: NotificationsCenterDefault?
+    private weak var center: DefaultNotificationsCenter?
     
     init(_ token: NSObjectProtocol,
-         center: NotificationsCenterDefault) {
+         center: DefaultNotificationsCenter) {
         
         self.token = token
         self.center = center
@@ -25,9 +25,9 @@ class NotificationContextDefault: NotificationContext {
     }
 }
 
-extension NotificationsCenterDefault {
+extension DefaultNotificationsCenter {
     
-    func removeObserver(context: NotificationContextDefault) {
+    func removeObserver(context: DefaultNotificationContext) {
         NotificationCenter.default.removeObserver(context.token)
     }
 }

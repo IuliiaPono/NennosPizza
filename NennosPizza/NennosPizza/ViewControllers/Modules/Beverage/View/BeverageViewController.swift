@@ -13,6 +13,10 @@ protocol BeverageViewInput: BaseViewInput {
     func addPurchaseToCart(with beverageModel: BasePurchasableViewModel)
 }
 
+private enum Layout {
+    static let rowHeight: CGFloat = 44.0
+}
+
 class BeverageViewController: BaseViewController {
     @IBOutlet private var tableView: UITableView!
     
@@ -76,6 +80,6 @@ extension BeverageViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44.0
+        return Layout.rowHeight
     }
 }

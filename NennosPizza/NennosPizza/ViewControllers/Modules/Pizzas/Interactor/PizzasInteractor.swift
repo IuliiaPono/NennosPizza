@@ -13,47 +13,42 @@ protocol PizzasInteractor: Interactor {
     func getPizzasList()
     func openCart()
     func addToCart(_ pizza: PizzaBasicCellViewModel)
-    func openDetails(_ pizza: PizzaBasicCellViewModel)
 }
 
-class PizzasInteractorDefault: BaseInteractor {
+class DefaultPizzasInteractor: BaseInteractor {
     private let presenter: PizzasPresenter
-    private let appManager: AppManager
+    private let applicationContext: ApplicationContext
     
     private var pizzas: [Pizza]?
     
-    init(presenter: PizzasPresenter, appManager: AppManager) {
+    init(presenter: PizzasPresenter, applicationContext: ApplicationContext) {
         self.presenter = presenter
-        self.appManager = appManager
+        self.applicationContext = applicationContext
         
         super.init()
     }
 }
 
-extension PizzasInteractorDefault: PizzasInteractor {
+extension DefaultPizzasInteractor: PizzasInteractor {
     func getPizzasList() {
         presenter.showLoadingView()
-        _ = appManager.foodService.getIngredients().then { ingredients in
-            return self.appManager.foodService.getPizzas(ingredients: ingredients)
+        _ = applicationContext.foodService.getIngredients().then { ingredients in
+            return self.applicationContext.foodService.getPizzas(ingredients: ingredients)
         }.done { [weak self] pizzas in
             guard let self = self else { return }
             self.pizzas = pizzas
-            self.presenter.displayPizzas(pizzas, imageLoader: self.appManager.imageDownloader)
+            self.presenter.displayPizzas(pizzas, imageLoader: self.applicationContext.imageDownloader)
         }
     }
     
     func openCart() {
-        presenter.openCart(with: appManager)
+        presenter.openCart(with: applicationContext)
     }
     
     func addToCart(_ pizza: PizzaBasicCellViewModel) {
         guard let pizza = pizzas?.first(where: { pizza.name == $0.name }) else { return }
         
-        appManager.cartStorageService.addPurchase(pizza)
+        applicationContext.cartStorageService.addPurchase(pizza)
         presenter.showAddToCartBanner()
-    }
-    
-    func openDetails(_ pizza: PizzaBasicCellViewModel) {
-        //presenter.openPizzaDetails()
     }
 }

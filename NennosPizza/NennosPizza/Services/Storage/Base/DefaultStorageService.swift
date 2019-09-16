@@ -1,5 +1,5 @@
 //
-//  StorageServiceDefault.swift
+//  DefaultStorageService.swift
 //  NennosPizza
 //
 //  Created by Iuliia Ponomareva on 11/09/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class StorageServiceDefault {
+class DefaultStorageService {
     let storage: StorageService
     
     init() {

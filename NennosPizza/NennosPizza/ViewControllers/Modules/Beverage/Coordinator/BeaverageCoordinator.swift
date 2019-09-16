@@ -9,14 +9,14 @@
 import UIKit
 
 class BeverageCoordinator: BaseCoordinator<BeverageViewController> {
-    override class func createModule(with appManager: AppManager) -> BeverageViewController {
+    override class func createModule(with applicationContext: ApplicationContext) -> BeverageViewController {
         let viewController: BeverageViewController = MainStoryboard.createBeverageViewController()
         
         let router = Router(viewController: viewController)
         
-        let presenter = BeveragePresenterDefault(router: router, view: viewController)
+        let presenter = DefaultBeveragePresenter(router: router, view: viewController)
         
-        let interactor = BeverageInteractorDefault(presenter: presenter, appManager: appManager)
+        let interactor = DefaultBeverageInteractor(presenter: presenter, applicationContext: applicationContext)
         
         viewController.interactor = interactor
         

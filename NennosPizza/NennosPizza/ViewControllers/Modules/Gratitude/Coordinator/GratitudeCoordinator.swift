@@ -9,14 +9,14 @@
 import Foundation
 
 class GratitudeCoordinator: BaseCoordinator<GratitudeViewController> {
-    override class func createModule(with appManager: AppManager) -> GratitudeViewController {
+    override class func createModule(with applicationContext: ApplicationContext) -> GratitudeViewController {
         let viewController = MainStoryboard.createGratitudeViewController()
         
         let router = Router(viewController: viewController)
         
-        let presenter = GratitudePresenterDefault(router: router, view: viewController)
+        let presenter = DefaultGratitudePresenter(router: router, view: viewController)
         
-        let interactor = GratitudeInteractorDefault(presenter: presenter)
+        let interactor = DefaultGratitudeInteractor(presenter: presenter)
         
         viewController.interactor = interactor
         

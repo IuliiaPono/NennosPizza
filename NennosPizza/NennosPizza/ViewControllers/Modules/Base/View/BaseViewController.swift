@@ -18,10 +18,6 @@ class BaseViewController: UIViewController {
     
     func setupInterface() { }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        return .portrait
-    }
-    
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .default
     }

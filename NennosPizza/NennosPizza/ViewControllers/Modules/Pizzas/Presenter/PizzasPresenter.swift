@@ -10,10 +10,10 @@ import UIKit
 
 protocol PizzasPresenter: Presenter, BannerPresentable {
     func displayPizzas(_ pizzas: [Pizza], imageLoader: ImageDownloader)
-    func openCart(with appManager: AppManager)
+    func openCart(with applicationContext: ApplicationContext)
 }
 
-class PizzasPresenterDefault: BasePresenter, PizzasPresenter {
+class DefaultPizzasPresenter: BasePresenter, PizzasPresenter {
     private weak var view: PizzasViewInput?
     
     init(router: Router, view: PizzasViewInput?) {
@@ -41,8 +41,8 @@ class PizzasPresenterDefault: BasePresenter, PizzasPresenter {
         view?.display(pizzaModels)
     }
     
-    func openCart(with appManager: AppManager) {
-        router.push(CartCoordinator.createModule(with: appManager))
+    func openCart(with applicationContext: ApplicationContext) {
+        router.push(CartCoordinator.createModule(with: applicationContext))
     }
     
     private func ingredientsString(from ingredients: [Ingredient]) -> String {

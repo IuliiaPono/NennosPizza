@@ -12,7 +12,7 @@ protocol GratitudePresenter: Presenter {
     func moveBack()
 }
 
-class GratitudePresenterDefault: BasePresenter {
+class DefaultGratitudePresenter: BasePresenter {
     private weak var view: GratitudeViewInput?
     
     init(router: Router, view: GratitudeViewInput?) {
@@ -21,7 +21,7 @@ class GratitudePresenterDefault: BasePresenter {
     }
 }
 
-extension GratitudePresenterDefault: GratitudePresenter {
+extension DefaultGratitudePresenter: GratitudePresenter {
     func moveBack() {
         router.popToRoot()
     }

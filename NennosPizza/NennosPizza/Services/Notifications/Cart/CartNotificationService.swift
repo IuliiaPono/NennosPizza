@@ -13,7 +13,7 @@ protocol CartNotificationService {
     func addObserverCartUpdateNotification(completion: @escaping OnCloseBlock) -> NotificationContext
 }
 
-class CartNotificationServiceDefault: NotificationsService, CartNotificationService {
+class DefaultCartNotificationService: NotificationsService, CartNotificationService {
     
     private let cartUpdateNotification = "CartUpdateNotification"
     

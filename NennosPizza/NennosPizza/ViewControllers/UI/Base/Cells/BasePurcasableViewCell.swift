@@ -9,7 +9,7 @@
 import UIKit
 
 final class BasePurcasableViewCell: UITableViewCell, XibInitializable {
-    var actionHandler: (() -> Void)?
+    private var actionHandler: (() -> Void)?
     
     @IBOutlet private var actionButton: UIButton!
     
@@ -27,7 +27,7 @@ final class BasePurcasableViewCell: UITableViewCell, XibInitializable {
     }
     
     private func setupButtonImage(for cellType: BaseCellType) {
-        let image = cellType.cellRightImage
+        let image = cellType.rightImage
         actionButton.setImage(image, for: .normal)
     }
     

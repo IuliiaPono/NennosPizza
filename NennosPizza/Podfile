@@ -4,10 +4,10 @@ use_frameworks!
 
 target 'NennosPizza' do
   pod 'Alamofire', '4.8.1'
-  pod 'AlamofireNetworkActivityIndicator'
+  pod 'AlamofireNetworkActivityIndicator', '2.4'
   pod 'Nuke', '7.6.2'
   pod 'PromiseKit', '6.8.4'
   pod 'PromiseKit/Alamofire', '6.8.4'
   pod 'lottie-ios', '3.0.4'
-  pod 'NotificationBannerSwift'
+  pod 'NotificationBannerSwift', '2.5.1'
 end

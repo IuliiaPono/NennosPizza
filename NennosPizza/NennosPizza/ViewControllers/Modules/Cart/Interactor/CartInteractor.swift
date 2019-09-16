@@ -17,22 +17,22 @@ protocol CartInteractor: Interactor {
     func moveBack()
 }
 
-class CartInteractorDefault: BaseInteractor {
+class DefaultCartInteractor: BaseInteractor {
     private let presenter: CartPresenter
     
-    private let appManager: AppManager
+    private let applicationContext: ApplicationContext
     
     private var purchases: [Purchasable]?
     
     private var notificationContext: NotificationContext?
     
-    init(presenter: CartPresenter, appManager: AppManager) {
+    init(presenter: CartPresenter, applicationContext: ApplicationContext) {
         self.presenter = presenter
-        self.appManager = appManager
+        self.applicationContext = applicationContext
         
         super.init()
         
-        notificationContext = self.appManager.cartNotificationCenter.addObserverCartUpdateNotification { [weak self] in
+        notificationContext = self.applicationContext.cartNotificationCenter.addObserverCartUpdateNotification { [weak self] in
             self?.getPurchases()
         }
     }
@@ -42,25 +42,25 @@ class CartInteractorDefault: BaseInteractor {
     }
 }
 
-extension CartInteractorDefault: CartInteractor {
+extension DefaultCartInteractor: CartInteractor {
     
     func getPurchases() {
-        let purchases = appManager.cartStorageService.getPurchases()
+        let purchases = applicationContext.cartStorageService.getPurchases()
         self.purchases = purchases
         presenter.presentPurchases(purchases)
     }
     
     func openBeverage() {
-        presenter.openBeverage(with: appManager)
+        presenter.openBeverage(with: applicationContext)
     }
     
     func checkout() {
         presenter.showLoadingView()
-        _ = appManager.cartService.orderFood(purchases: purchases ?? [])
+        _ = applicationContext.cartService.orderFood(purchases: purchases ?? [])
         .done { [weak self] in
             guard let self = self else { return }
 
-            self.presenter.openGratitude(with: self.appManager)
+            self.presenter.openGratitude(with: self.applicationContext)
         }
         .catch({ [weak self] _ in
             self?.presenter.hideLoadingView()
@@ -70,7 +70,7 @@ extension CartInteractorDefault: CartInteractor {
     func removeFromCart(_ purchase: BasePurchasableViewModel) {
         guard let purchase = purchases?.first(where: { purchase.productName == $0.name }) else { return }
         
-        appManager.cartStorageService.removePurchase(purchase)
+        applicationContext.cartStorageService.removePurchase(purchase)
     }
     
     func moveBack() {

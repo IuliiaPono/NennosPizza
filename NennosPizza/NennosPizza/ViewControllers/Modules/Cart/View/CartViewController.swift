@@ -13,6 +13,11 @@ protocol CartViewInput: BaseViewInput {
     func removeFromCart(_ purchase: BasePurchasableViewModel)
 }
 
+private enum Layout {
+    static let rowHeight: CGFloat = 44.0
+    static let footerHeight: CGFloat = 88.0
+}
+
 class CartViewController: BaseViewController {
     @IBOutlet private var tableView: UITableView!
     
@@ -52,8 +57,9 @@ class CartViewController: BaseViewController {
     }
     
     private func setFooterView() {
-        let footerFrame = CGRect(x: 0, y: 0, width: view.bounds.width, height: 88)
-        let footerView = CartFooterView(frame: footerFrame)
+        let origin: CGPoint = .zero
+        let size: CGSize = CGSize(width: view.bounds.width, height: Layout.footerHeight)
+        let footerView = CartFooterView(frame: CGRect(origin: origin, size: size))
         
         tableView.tableFooterView = footerView
         self.cartFooterView = footerView
@@ -101,6 +107,6 @@ extension CartViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 44.0
+        return Layout.rowHeight
     }
 }

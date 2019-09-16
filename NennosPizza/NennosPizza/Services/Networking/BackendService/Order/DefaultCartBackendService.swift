@@ -1,5 +1,5 @@
 //
-//  CartBackendServiceDefault.swift
+//  DefaultCartBackendService.swift
 //  NennosPizza
 //
 //  Created by Iuliia Ponomareva on 13/09/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-final class CartBackendServiceDefault: OrderBackendService, CartBackendService {
+final class DefaultCartBackendService: OrderBackendService, CartBackendService {
     func orderFood(purchases: [Purchasable]) -> Promise<Void> {
         let (pizzas, drinkIDs) = split(purchases: purchases)
         return client.post(path: "post", parameters: ["pizzas": pizzas.container, "drinks": drinkIDs]).then { response -> Promise<Void> in return

@@ -10,12 +10,12 @@ import UIKit
 
 protocol CartPresenter: Presenter, BannerPresentable {
     func presentPurchases(_ purchases: [Purchasable])
-    func openBeverage(with appManager: AppManager)
-    func openGratitude(with appManager: AppManager)
+    func openBeverage(with applicationContext: ApplicationContext)
+    func openGratitude(with applicationContext: ApplicationContext)
     func moveBack()
 }
 
-class CartPresenterDefault: BasePresenter {
+class DefaultCartPresenter: BasePresenter {
     private weak var view: CartViewInput?
     
     init(router: Router, view: CartViewInput?) {
@@ -24,7 +24,7 @@ class CartPresenterDefault: BasePresenter {
     }
 }
 
-extension CartPresenterDefault: CartPresenter {
+extension DefaultCartPresenter: CartPresenter {
     func presentPurchases(_ purchases: [Purchasable]) {
         let viewModels = purchases.map { purchase -> BasePurchasableViewModel in
             return BasePurchasableViewModel(
@@ -43,13 +43,13 @@ extension CartPresenterDefault: CartPresenter {
         view?.display(viewModels, totalPrice: stringTotalPrice)
     }
     
-    func openGratitude(with appManager: AppManager) {
+    func openGratitude(with applicationContext: ApplicationContext) {
         hideLoadingView()
-        router.push(GratitudeCoordinator.createModule(with: appManager))
+        router.push(GratitudeCoordinator.createModule(with: applicationContext))
     }
     
-    func openBeverage(with appManager: AppManager) {
-        router.push(BeverageCoordinator.createModule(with: appManager))
+    func openBeverage(with applicationContext: ApplicationContext) {
+        router.push(BeverageCoordinator.createModule(with: applicationContext))
     }
     
     func moveBack() {

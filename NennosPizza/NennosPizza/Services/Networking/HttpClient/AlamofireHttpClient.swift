@@ -41,7 +41,7 @@ class AlamofireHttpClient: HttpClient {
         self.decoder = decoder
     }
     
-    // MARK: Url
+    // MARK: - URL
     
     private func absolutePath(_ relativePath: String) -> URL {
         guard !relativePath.isEmpty else {
@@ -57,7 +57,7 @@ class AlamofireHttpClient: HttpClient {
         return url
     }
     
-    // MARK: Requests
+    // MARK: - Requests
     
     func get(path: String, parameters: [String: Any]?) -> Promise<Any> {
         let request = RequestModel(method: .get,

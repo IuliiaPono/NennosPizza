@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BrandActionButton: UIButton {
+final class BrandActionButton: UIButton {
     @IBInspectable var settableButtonColor: String = "red" {
         didSet {
             if settableButtonColor == "red" {
@@ -21,7 +21,7 @@ class BrandActionButton: UIButton {
     
     override var isEnabled: Bool {
         didSet {
-            let config = Config.config(for: activeState)
+            let config = Config.makeConfig(for: activeState)
             apply(config: config)
         }
     }
@@ -47,7 +47,7 @@ class BrandActionButton: UIButton {
     // MARK: - Setup
     
     private func setup() {
-        let config = Config.config(for: activeState)
+        let config = Config.makeConfig(for: activeState)
         apply(config: config)
     }
     
@@ -69,7 +69,7 @@ class BrandActionButton: UIButton {
             case inactive
         }
         
-        static func config(for state: State) -> Config {
+        static func makeConfig(for state: State) -> Config {
             switch state {
             case .inactive:
                 return Config(color: .lightGray, font: .textSemibold, fontColor: .white)

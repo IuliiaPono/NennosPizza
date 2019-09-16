@@ -13,7 +13,7 @@ enum BaseCellType {
     case addable
     case selectable
     
-    var cellRightImage: UIImage? {
+    var rightImage: UIImage? {
         switch self {
         case .addable:
             return UIImage(named: "ic_create_pizza")

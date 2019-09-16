@@ -1,5 +1,5 @@
 //
-//  NotificationsCenterDefault.swift
+//  DefaultNotificationsCenter.swift
 //  NennosPizza
 //
 //  Created by Iuliia Ponomareva on 12/09/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-class NotificationsCenterDefault: NotificationsCenter {
+class DefaultNotificationsCenter: NotificationsCenter {
     
     func post(name: String, object: Any?) {
         NotificationCenter.default.post(name: Notification.Name(name), object: object)
@@ -20,6 +20,6 @@ class NotificationsCenterDefault: NotificationsCenter {
                                                            queue: OperationQueue.main) { notification in
                                                             block(notification.object)
         }
-        return NotificationContextDefault(token, center: self)
+        return DefaultNotificationContext(token, center: self)
     }
 }

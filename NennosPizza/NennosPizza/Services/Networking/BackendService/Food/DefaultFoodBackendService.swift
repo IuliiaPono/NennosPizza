@@ -1,5 +1,5 @@
 //
-//  FoodBackendServiceDefault.swift
+//  DefaultFoodBackendService.swift
 //  NennosPizza
 //
 //  Created by Iuliia Ponomareva on 10/09/2019.
@@ -9,7 +9,7 @@
 import Foundation
 import PromiseKit
 
-final class FoodBackendServiceDefault: ProductsBackendService, FoodBackendService {
+final class DefaultFoodBackendService: ProductsBackendService, FoodBackendService {
     func getPizzas(ingredients: [Ingredient]) -> Promise<[Pizza]> {
         return client.get(path: BackendRequestPath.getPizzas.rawValue).then { response -> Promise<[Pizza]> in
             let breafPizzas = try self.clientDecoder.decode(BackendPizzasObject.self, from: response)

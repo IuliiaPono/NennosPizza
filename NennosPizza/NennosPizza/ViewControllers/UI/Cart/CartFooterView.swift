@@ -24,10 +24,10 @@ final class CartFooterView: UIView, XibInitializable {
     private func setup() {
         loadFromXib()
         
-        updateSum(with: "0.0")
+        updateSum()
     }
     
-    func updateSum(with price: String) {
+    func updateSum(with price: String = "0.0") {
         priceLabel.text = price
     }
 }

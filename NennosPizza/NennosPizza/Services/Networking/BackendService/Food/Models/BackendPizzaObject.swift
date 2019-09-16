@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct BackendPizzaObject: Codable, JSONSerializaber, Equatable {
+struct BackendPizzaObject: Codable, JSONSerializable, Equatable {
     let name: String
     let ingredients: [Int]
     let imageUrl: String?

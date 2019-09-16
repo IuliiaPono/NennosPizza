@@ -13,7 +13,7 @@ class NotificationsService {
     let center: NotificationsCenter
     
     init() {
-        self.center = NotificationsCenterDefault()
+        self.center = DefaultNotificationsCenter()
     }
     
     init(center: NotificationsCenter) {

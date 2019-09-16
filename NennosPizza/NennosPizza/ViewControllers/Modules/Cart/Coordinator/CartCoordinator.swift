@@ -9,14 +9,14 @@
 import Foundation
 
 class CartCoordinator: BaseCoordinator<CartViewController> {
-    override class func createModule(with appManager: AppManager) -> CartViewController {
+    override class func createModule(with applicationContext: ApplicationContext) -> CartViewController {
         let viewController = MainStoryboard.createCartViewController()
         
         let router = Router(viewController: viewController)
         
-        let presenter = CartPresenterDefault(router: router, view: viewController)
+        let presenter = DefaultCartPresenter(router: router, view: viewController)
         
-        let interactor = CartInteractorDefault(presenter: presenter, appManager: appManager)
+        let interactor = DefaultCartInteractor(presenter: presenter, applicationContext: applicationContext)
         
         viewController.interactor = interactor
         

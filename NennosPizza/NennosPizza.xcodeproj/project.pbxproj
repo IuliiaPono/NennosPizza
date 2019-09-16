@@ -13,7 +13,7 @@
 		3100FB5B232B762E00E503D6 /* GratitudeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB5A232B762E00E503D6 /* GratitudeCoordinator.swift */; };
 		3100FB5E232B7E9300E503D6 /* OrderBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB5D232B7E9300E503D6 /* OrderBackendService.swift */; };
 		3100FB60232B7EF500E503D6 /* CartBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB5F232B7EF500E503D6 /* CartBackendService.swift */; };
-		3100FB62232B7FB900E503D6 /* CartBackendServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB61232B7FB900E503D6 /* CartBackendServiceDefault.swift */; };
+		3100FB62232B7FB900E503D6 /* DefaultCartBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB61232B7FB900E503D6 /* DefaultCartBackendService.swift */; };
 		3100FB64232B81FC00E503D6 /* Array+Values.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB63232B81FC00E503D6 /* Array+Values.swift */; };
 		3100FB66232B8B1A00E503D6 /* JSONSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB65232B8B1A00E503D6 /* JSONSerializer.swift */; };
 		3100FB6A232B91C700E503D6 /* PizzaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3100FB69232B91C700E503D6 /* PizzaTests.swift */; };
@@ -47,7 +47,7 @@
 		310350082327C055001828BE /* BackendPizzaObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350072327C055001828BE /* BackendPizzaObject.swift */; };
 		3103500A2327C098001828BE /* BackendPizzasObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350092327C098001828BE /* BackendPizzasObject.swift */; };
 		3103500C2327C1C7001828BE /* FoodBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103500B2327C1C7001828BE /* FoodBackendService.swift */; };
-		3103500E2327C256001828BE /* FoodBackendServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103500D2327C256001828BE /* FoodBackendServiceDefault.swift */; };
+		3103500E2327C256001828BE /* DefaultFoodBackendService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103500D2327C256001828BE /* DefaultFoodBackendService.swift */; };
 		310350102327C2FE001828BE /* BackendRequestPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103500F2327C2FD001828BE /* BackendRequestPath.swift */; };
 		310350192327CB4A001828BE /* PizzasCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310350182327CB4A001828BE /* PizzasCoordinator.swift */; };
 		3103501E2327CE72001828BE /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3103501D2327CE72001828BE /* BaseCoordinator.swift */; };
@@ -69,13 +69,13 @@
 		3122092E2328D344001471F9 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122092D2328D344001471F9 /* ImageDownloader.swift */; };
 		3122093123290F8A001471F9 /* PizzaLoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093023290F8A001471F9 /* PizzaLoadingView.swift */; };
 		31220935232914B4001471F9 /* BaseNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31220934232914B4001471F9 /* BaseNavigationBarView.swift */; };
-		3122093823291915001471F9 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093723291915001471F9 /* AppCoordinator.swift */; };
+		3122093823291915001471F9 /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093723291915001471F9 /* ApplicationCoordinator.swift */; };
 		3122093A23292264001471F9 /* UINavigationController+Fade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093923292264001471F9 /* UINavigationController+Fade.swift */; };
 		3122093F23293F4D001471F9 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122093E23293F4D001471F9 /* StorageService.swift */; };
 		3122094623294509001471F9 /* CartStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122094523294508001471F9 /* CartStorageService.swift */; };
 		3122094823294762001471F9 /* CachingStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122094723294762001471F9 /* CachingStorageService.swift */; };
-		3122094A232947EC001471F9 /* StorageServiceDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31220949232947EC001471F9 /* StorageServiceDefault.swift */; };
-		3122094D23294A00001471F9 /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122094C23294A00001471F9 /* AppManager.swift */; };
+		3122094A232947EC001471F9 /* DefaultStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31220949232947EC001471F9 /* DefaultStorageService.swift */; };
+		3122094D23294A00001471F9 /* ApplicationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3122094C23294A00001471F9 /* ApplicationContext.swift */; };
 		312AF51823267A4500FED45F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF51723267A4500FED45F /* AppDelegate.swift */; };
 		312AF51A23267A4500FED45F /* PizzasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 312AF51923267A4500FED45F /* PizzasViewController.swift */; };
 		312AF51D23267A4500FED45F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 312AF51B23267A4500FED45F /* Main.storyboard */; };
@@ -104,8 +104,8 @@
 		31FE6A02232A427F0010D02D /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A01232A427F0010D02D /* NotificationService.swift */; };
 		31FE6A04232A42AB0010D02D /* NotificationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A03232A42AB0010D02D /* NotificationContext.swift */; };
 		31FE6A06232A42EA0010D02D /* NotificationsCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A05232A42EA0010D02D /* NotificationsCenter.swift */; };
-		31FE6A08232A430F0010D02D /* NotificationsCenterDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A07232A430F0010D02D /* NotificationsCenterDefault.swift */; };
-		31FE6A0A232A437E0010D02D /* NotificationContextDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A09232A437E0010D02D /* NotificationContextDefault.swift */; };
+		31FE6A08232A430F0010D02D /* DefaultNotificationsCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A07232A430F0010D02D /* DefaultNotificationsCenter.swift */; };
+		31FE6A0A232A437E0010D02D /* DefaultNotificationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A09232A437E0010D02D /* DefaultNotificationContext.swift */; };
 		31FE6A0D232A43CA0010D02D /* CartNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A0C232A43CA0010D02D /* CartNotificationService.swift */; };
 		31FE6A14232A559C0010D02D /* BasePurcasableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A13232A559C0010D02D /* BasePurcasableViewCell.swift */; };
 		31FE6A16232A55A90010D02D /* BasePurchasableViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31FE6A15232A55A90010D02D /* BasePurchasableViewModel.swift */; };
@@ -134,7 +134,7 @@
 		3100FB5A232B762E00E503D6 /* GratitudeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GratitudeCoordinator.swift; sourceTree = "<group>"; };
 		3100FB5D232B7E9300E503D6 /* OrderBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderBackendService.swift; sourceTree = "<group>"; };
 		3100FB5F232B7EF500E503D6 /* CartBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBackendService.swift; sourceTree = "<group>"; };
-		3100FB61232B7FB900E503D6 /* CartBackendServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartBackendServiceDefault.swift; sourceTree = "<group>"; };
+		3100FB61232B7FB900E503D6 /* DefaultCartBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCartBackendService.swift; sourceTree = "<group>"; };
 		3100FB63232B81FC00E503D6 /* Array+Values.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Values.swift"; sourceTree = "<group>"; };
 		3100FB65232B8B1A00E503D6 /* JSONSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONSerializer.swift; sourceTree = "<group>"; };
 		3100FB69232B91C700E503D6 /* PizzaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaTests.swift; sourceTree = "<group>"; };
@@ -168,7 +168,7 @@
 		310350072327C055001828BE /* BackendPizzaObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendPizzaObject.swift; sourceTree = "<group>"; };
 		310350092327C098001828BE /* BackendPizzasObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendPizzasObject.swift; sourceTree = "<group>"; };
 		3103500B2327C1C7001828BE /* FoodBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBackendService.swift; sourceTree = "<group>"; };
-		3103500D2327C256001828BE /* FoodBackendServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodBackendServiceDefault.swift; sourceTree = "<group>"; };
+		3103500D2327C256001828BE /* DefaultFoodBackendService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultFoodBackendService.swift; sourceTree = "<group>"; };
 		3103500F2327C2FD001828BE /* BackendRequestPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendRequestPath.swift; sourceTree = "<group>"; };
 		310350182327CB4A001828BE /* PizzasCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasCoordinator.swift; sourceTree = "<group>"; };
 		3103501D2327CE72001828BE /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
@@ -190,13 +190,13 @@
 		3122092D2328D344001471F9 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		3122093023290F8A001471F9 /* PizzaLoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaLoadingView.swift; sourceTree = "<group>"; };
 		31220934232914B4001471F9 /* BaseNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationBarView.swift; sourceTree = "<group>"; };
-		3122093723291915001471F9 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		3122093723291915001471F9 /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
 		3122093923292264001471F9 /* UINavigationController+Fade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Fade.swift"; sourceTree = "<group>"; };
 		3122093E23293F4D001471F9 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		3122094523294508001471F9 /* CartStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartStorageService.swift; sourceTree = "<group>"; };
 		3122094723294762001471F9 /* CachingStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingStorageService.swift; sourceTree = "<group>"; };
-		31220949232947EC001471F9 /* StorageServiceDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceDefault.swift; sourceTree = "<group>"; };
-		3122094C23294A00001471F9 /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		31220949232947EC001471F9 /* DefaultStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultStorageService.swift; sourceTree = "<group>"; };
+		3122094C23294A00001471F9 /* ApplicationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContext.swift; sourceTree = "<group>"; };
 		312AF51423267A4500FED45F /* NennosPizza.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NennosPizza.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		312AF51723267A4500FED45F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		312AF51923267A4500FED45F /* PizzasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzasViewController.swift; sourceTree = "<group>"; };
@@ -229,8 +229,8 @@
 		31FE6A01232A427F0010D02D /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		31FE6A03232A42AB0010D02D /* NotificationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationContext.swift; sourceTree = "<group>"; };
 		31FE6A05232A42EA0010D02D /* NotificationsCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCenter.swift; sourceTree = "<group>"; };
-		31FE6A07232A430F0010D02D /* NotificationsCenterDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsCenterDefault.swift; sourceTree = "<group>"; };
-		31FE6A09232A437E0010D02D /* NotificationContextDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationContextDefault.swift; sourceTree = "<group>"; };
+		31FE6A07232A430F0010D02D /* DefaultNotificationsCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNotificationsCenter.swift; sourceTree = "<group>"; };
+		31FE6A09232A437E0010D02D /* DefaultNotificationContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultNotificationContext.swift; sourceTree = "<group>"; };
 		31FE6A0C232A43CA0010D02D /* CartNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartNotificationService.swift; sourceTree = "<group>"; };
 		31FE6A13232A559C0010D02D /* BasePurcasableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePurcasableViewCell.swift; sourceTree = "<group>"; };
 		31FE6A15232A55A90010D02D /* BasePurchasableViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePurchasableViewModel.swift; sourceTree = "<group>"; };
@@ -308,7 +308,7 @@
 			isa = PBXGroup;
 			children = (
 				3100FB5F232B7EF500E503D6 /* CartBackendService.swift */,
-				3100FB61232B7FB900E503D6 /* CartBackendServiceDefault.swift */,
+				3100FB61232B7FB900E503D6 /* DefaultCartBackendService.swift */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -499,7 +499,7 @@
 			children = (
 				31034FFF2327BC43001828BE /* Models */,
 				3103500B2327C1C7001828BE /* FoodBackendService.swift */,
-				3103500D2327C256001828BE /* FoodBackendServiceDefault.swift */,
+				3103500D2327C256001828BE /* DefaultFoodBackendService.swift */,
 			);
 			path = Food;
 			sourceTree = "<group>";
@@ -715,8 +715,8 @@
 			isa = PBXGroup;
 			children = (
 				312AF51723267A4500FED45F /* AppDelegate.swift */,
-				3122093723291915001471F9 /* AppCoordinator.swift */,
-				3122094C23294A00001471F9 /* AppManager.swift */,
+				3122093723291915001471F9 /* ApplicationCoordinator.swift */,
+				3122094C23294A00001471F9 /* ApplicationContext.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -735,7 +735,7 @@
 			children = (
 				3122093E23293F4D001471F9 /* StorageService.swift */,
 				3122094723294762001471F9 /* CachingStorageService.swift */,
-				31220949232947EC001471F9 /* StorageServiceDefault.swift */,
+				31220949232947EC001471F9 /* DefaultStorageService.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -996,8 +996,8 @@
 			isa = PBXGroup;
 			children = (
 				31FE6A05232A42EA0010D02D /* NotificationsCenter.swift */,
-				31FE6A07232A430F0010D02D /* NotificationsCenterDefault.swift */,
-				31FE6A09232A437E0010D02D /* NotificationContextDefault.swift */,
+				31FE6A07232A430F0010D02D /* DefaultNotificationsCenter.swift */,
+				31FE6A09232A437E0010D02D /* DefaultNotificationContext.swift */,
 			);
 			path = NotificationCenter;
 			sourceTree = "<group>";
@@ -1254,28 +1254,28 @@
 				31FE6A1A232A5F4D0010D02D /* String+Price.swift in Sources */,
 				31034FB523277B17001828BE /* Accessible.swift in Sources */,
 				31034FEF2327B66E001828BE /* Decoder.swift in Sources */,
-				3100FB62232B7FB900E503D6 /* CartBackendServiceDefault.swift in Sources */,
+				3100FB62232B7FB900E503D6 /* DefaultCartBackendService.swift in Sources */,
 				31034FC223277F80001828BE /* UIView+AttachmentToParent.swift in Sources */,
 				310350102327C2FE001828BE /* BackendRequestPath.swift in Sources */,
 				312AF53C23267D8600FED45F /* BrandColor.swift in Sources */,
 				310350412327E542001828BE /* PizzaBasicCellViewModel.swift in Sources */,
-				3122094D23294A00001471F9 /* AppManager.swift in Sources */,
+				3122094D23294A00001471F9 /* ApplicationContext.swift in Sources */,
 				310350212327CECD001828BE /* BaseViewController.swift in Sources */,
 				312AF547232686F900FED45F /* BrandActionButton.swift in Sources */,
-				3103500E2327C256001828BE /* FoodBackendServiceDefault.swift in Sources */,
+				3103500E2327C256001828BE /* DefaultFoodBackendService.swift in Sources */,
 				3100FB60232B7EF500E503D6 /* CartBackendService.swift in Sources */,
 				3100FB5B232B762E00E503D6 /* GratitudeCoordinator.swift in Sources */,
 				3100FB55232B760800E503D6 /* GratitudeViewController.swift in Sources */,
-				3122093823291915001471F9 /* AppCoordinator.swift in Sources */,
+				3122093823291915001471F9 /* ApplicationCoordinator.swift in Sources */,
 				31034FF92327B81E001828BE /* AlamofireHttpClient.swift in Sources */,
 				31034FBA23277E14001828BE /* Reusable.swift in Sources */,
 				31FE69F7232A3C1C0010D02D /* CartPresenter.swift in Sources */,
 				312AF51A23267A4500FED45F /* PizzasViewController.swift in Sources */,
 				31034FBD23277E8F001828BE /* UITableView+ViewModels.swift in Sources */,
-				31FE6A0A232A437E0010D02D /* NotificationContextDefault.swift in Sources */,
-				3122094A232947EC001471F9 /* StorageServiceDefault.swift in Sources */,
+				31FE6A0A232A437E0010D02D /* DefaultNotificationContext.swift in Sources */,
+				3122094A232947EC001471F9 /* DefaultStorageService.swift in Sources */,
 				31FE69F5232A3C070010D02D /* CartInteractor.swift in Sources */,
-				31FE6A08232A430F0010D02D /* NotificationsCenterDefault.swift in Sources */,
+				31FE6A08232A430F0010D02D /* DefaultNotificationsCenter.swift in Sources */,
 				31FE6A0D232A43CA0010D02D /* CartNotificationService.swift in Sources */,
 				31034FE82327A48A001828BE /* Beverage.swift in Sources */,
 				312AF51823267A4500FED45F /* AppDelegate.swift in Sources */,

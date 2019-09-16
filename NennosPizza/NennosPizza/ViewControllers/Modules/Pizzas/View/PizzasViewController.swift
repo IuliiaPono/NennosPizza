@@ -13,6 +13,10 @@ protocol PizzasViewInput: BaseViewInput {
     func addPurchaseToCart(with pizzaModel: PizzaBasicCellViewModel)
 }
 
+private enum Layout {
+    static let rowHeight: CGFloat = 150.0
+}
+
 class PizzasViewController: BaseViewController {
     @IBOutlet private var tableView: UITableView!
     
@@ -72,13 +76,9 @@ extension PizzasViewController: PizzasViewInput {
 extension PizzasViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        guard let pizzaModel = tableViewAdapter.itemModel(at: indexPath) as? PizzaBasicCellViewModel else { return }
-        
-        interactor?.openDetails(pizzaModel)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150.0
+        return Layout.rowHeight
     }
 }

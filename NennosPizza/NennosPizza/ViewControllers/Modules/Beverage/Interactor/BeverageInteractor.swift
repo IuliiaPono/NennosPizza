@@ -15,23 +15,23 @@ protocol BeverageInteractor: Interactor {
     func moveBack()
 }
 
-class BeverageInteractorDefault: BaseInteractor {
+class DefaultBeverageInteractor: BaseInteractor {
     private let presenter: BeveragePresenter
-    private let appManager: AppManager
+    private let applicationContext: ApplicationContext
     
     private var beverage: [Beverage]?
     
-    init(presenter: BeveragePresenter, appManager: AppManager) {
+    init(presenter: BeveragePresenter, applicationContext: ApplicationContext) {
         self.presenter = presenter
-        self.appManager = appManager
+        self.applicationContext = applicationContext
     }
 }
 
-extension BeverageInteractorDefault: BeverageInteractor {
+extension DefaultBeverageInteractor: BeverageInteractor {
     func getBeverage() {
         presenter.showLoadingView()
         
-        _ = appManager.foodService.getBeverage().done { [weak self] beverage in
+        _ = applicationContext.foodService.getBeverage().done { [weak self] beverage in
             self?.beverage = beverage
             self?.presenter.displayBeverage(beverage)
         }
@@ -40,7 +40,7 @@ extension BeverageInteractorDefault: BeverageInteractor {
     func addToCart(_ beverage: BasePurchasableViewModel) {
         guard let drink = self.beverage?.first(where: { beverage.productName == $0.name }) else { return }
         
-        appManager.cartStorageService.addPurchase(drink)
+        applicationContext.cartStorageService.addPurchase(drink)
         presenter.showAddToCartBanner()
     }
     

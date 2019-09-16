@@ -9,14 +9,14 @@
 import UIKit
 
 class PizzaCoordinator: BaseCoordinator<PizzasViewController>  {
-    override class func createModule(with appManager: AppManager) -> PizzasViewController {
+    override class func createModule(with applicationContext: ApplicationContext) -> PizzasViewController {
         let viewController: PizzasViewController = MainStoryboard.createPizzasViewController()
         
         let router = Router(viewController: viewController)
         
-        let presenter = PizzasPresenterDefault(router: router, view: viewController)
+        let presenter = DefaultPizzasPresenter(router: router, view: viewController)
         
-        let interactor = PizzasInteractorDefault(presenter: presenter, appManager: appManager)
+        let interactor = DefaultPizzasInteractor(presenter: presenter, applicationContext: applicationContext)
         
         viewController.interactor = interactor
         

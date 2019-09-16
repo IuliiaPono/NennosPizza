@@ -13,26 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    let app = AppManager()
+    private let applicationContext = ApplicationContext()
     
-    private lazy var appCoordinator: AppCoordinator = {
-        return AppCoordinator(window: window!, appManager: app)
-    }()
+    private var appCoordinator: ApplicationCoordinator!
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
-        window?.makeKeyAndVisible()
-        appCoordinator.start()
+        
+        if let window = window {
+            appCoordinator = ApplicationCoordinator(window: window, applicationContext: applicationContext)
+            
+            appCoordinator.start()
+        }
+        
         return true
     }
-
-    func applicationWillResignActive(_ application: UIApplication) { }
-
-    func applicationDidEnterBackground(_ application: UIApplication) { }
-
-    func applicationWillEnterForeground(_ application: UIApplication) { }
-
-    func applicationDidBecomeActive(_ application: UIApplication) { }
-
-    func applicationWillTerminate(_ application: UIApplication) { }
 }

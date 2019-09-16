@@ -1,5 +1,5 @@
 //
-//  AppManager.swift
+//  ApplicationContext.swift
 //  NennosPizza
 //
 //  Created by Iuliia Ponomareva on 11/09/2019.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-final class AppManager {
+final class ApplicationContext {
     let imageDownloader: ImageDownloader
     
     let cartNotificationCenter: CartNotificationService
@@ -18,13 +18,13 @@ final class AppManager {
     let cartService: CartBackendService
     
     init() {
-        let cartNotificationCenter = CartNotificationServiceDefault()
-        let cartStorageService = CartStorageServiceDefault(cartNotificationService: cartNotificationCenter)
+        let cartNotificationCenter = DefaultCartNotificationService()
+        let cartStorageService = DefaultCartStorageService(cartNotificationService: cartNotificationCenter)
         
-        let foodService = FoodBackendServiceDefault()
-        let cartService = CartBackendServiceDefault()
+        let foodService = DefaultFoodBackendService()
+        let cartService = DefaultCartBackendService()
         
-        let imageDownloader = ImageDownloaderDefault()
+        let imageDownloader = DefaultImageDownloader()
         
         self.imageDownloader = imageDownloader
         

@@ -15,7 +15,7 @@ protocol CartStorageService {
     func removePurchases()
 }
 
-class CartStorageServiceDefault: StorageServiceDefault, CartStorageService {
+class DefaultCartStorageService: DefaultStorageService, CartStorageService {
     
     private let purchasesKey = "cart_purchases_key"
     

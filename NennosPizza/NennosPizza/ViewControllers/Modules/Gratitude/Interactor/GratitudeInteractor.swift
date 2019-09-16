@@ -12,7 +12,7 @@ protocol GratitudeInteractor: Interactor {
     func moveBack()
 }
 
-class GratitudeInteractorDefault: BaseInteractor {
+class DefaultGratitudeInteractor: BaseInteractor {
     private let presenter: GratitudePresenter
     
     init(presenter: GratitudePresenter) {
@@ -21,7 +21,7 @@ class GratitudeInteractorDefault: BaseInteractor {
     }
 }
 
-extension GratitudeInteractorDefault: GratitudeInteractor {
+extension DefaultGratitudeInteractor: GratitudeInteractor {
     func moveBack() {
         presenter.moveBack()
     }

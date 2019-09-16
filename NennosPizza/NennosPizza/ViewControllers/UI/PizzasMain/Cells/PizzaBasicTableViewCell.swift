@@ -9,7 +9,7 @@
 import UIKit
 
 final class PizzaBasicTableViewCell: UITableViewCell, XibInitializable {
-    var purchaseHandler: (() -> Void)?
+    private var purchaseHandler: (() -> Void)?
     
     @IBOutlet private var pizzaImageView: UIImageView!
     
