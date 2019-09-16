@@ -1,0 +1,23 @@
+{
+    "basePrice": 4,
+    "pizzas": [
+        {
+            "wtf": "smeth",
+            "ingredients": [
+                1,
+                5,
+                6
+            ],
+            "name": "Primavera",
+            "imageUrl": "https://i.ibb.co/XD5kYNd/primavera.png"
+        },
+        {
+            "ingredients": [
+                1,
+                "sdgsg",
+                10
+            ],
+            "name": "Mare Bianco"
+        }
+    ]
+}
