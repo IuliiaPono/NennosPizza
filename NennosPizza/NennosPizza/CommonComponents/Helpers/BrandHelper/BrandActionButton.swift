@@ -8,14 +8,24 @@
 
 import UIKit
 
+private enum ColorConfig: String {
+    case red
+    case yellow
+    
+    var color: BrandColor {
+        switch self {
+        case .red:
+            return .red
+        case .yellow:
+            return .yellow
+        }
+    }
+}
+
 final class BrandActionButton: UIButton {
     @IBInspectable var settableButtonColor: String = "red" {
         didSet {
-            if settableButtonColor == "red" {
-                buttonColor = .red
-            } else {
-                buttonColor = .yellow
-            }
+            colorCobfig = ColorConfig(rawValue: settableButtonColor) ?? .red
         }
     }
     
@@ -26,10 +36,10 @@ final class BrandActionButton: UIButton {
         }
     }
     
-    private var buttonColor: BrandColor = .red
+    private var colorCobfig: ColorConfig = .red
     
     private var activeState: Config.State {
-        return isEnabled ? .active(color: buttonColor) : .inactive
+        return isEnabled ? .active(config: colorCobfig) : .inactive
     }
     
     // MARK: - Init
@@ -65,7 +75,7 @@ final class BrandActionButton: UIButton {
         let fontColor: BrandColor
         
         enum State {
-            case active(color: BrandColor)
+            case active(config: ColorConfig)
             case inactive
         }
         
@@ -73,8 +83,8 @@ final class BrandActionButton: UIButton {
             switch state {
             case .inactive:
                 return Config(color: .lightGray, font: .textSemibold, fontColor: .white)
-            case .active(let color):
-                return Config(color: color, font: .textSemibold, fontColor: .white)
+            case .active(let config):
+                return Config(color: config.color, font: .textSemibold, fontColor: .white)
             }
         }
     }
