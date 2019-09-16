@@ -16,7 +16,7 @@ protocol PizzaBasicViewModelProperties: class {
 }
 
 final class PizzaBasicCellViewModel: CellViewModel, PizzaBasicViewModelProperties {
-    let purchaseHandler: (_ model: PizzaBasicCellViewModel) -> Void
+    var purchaseHandler: OnActionExecute?
     let imageDownloader: ImageDownloader
     
     let name: String
@@ -24,7 +24,7 @@ final class PizzaBasicCellViewModel: CellViewModel, PizzaBasicViewModelPropertie
     let imageURL: String?
     let basePrice: String
     
-    init(name: String, ingredients: String, imageURL: String?, basePrice: String, imageDownloader: ImageDownloader, purchaseHandler: @escaping (_ model: PizzaBasicCellViewModel) -> Void) {
+    init(name: String, ingredients: String, imageURL: String?, basePrice: String, imageDownloader: ImageDownloader, purchaseHandler: OnActionExecute?) {
         self.name = name
         self.ingredients = ingredients
         self.imageURL = imageURL
@@ -38,7 +38,7 @@ final class PizzaBasicCellViewModel: CellViewModel, PizzaBasicViewModelPropertie
         cell.setup(with: self, imageDownloader: self.imageDownloader) { [weak self] in
             guard let self = self else { return }
             
-            self.purchaseHandler(self)
+            self.purchaseHandler?()
         }
     }
 }

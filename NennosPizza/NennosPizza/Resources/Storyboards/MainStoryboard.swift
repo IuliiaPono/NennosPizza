@@ -8,6 +8,8 @@
 
 import UIKit
 
+// TO-DO: Make separate storyboards in case the project will grow. For now it's okay to keep everything in a single one
+
 enum MainStoryboard {
     static let storyboard = UIStoryboard(name: "Main", bundle: nil)
     

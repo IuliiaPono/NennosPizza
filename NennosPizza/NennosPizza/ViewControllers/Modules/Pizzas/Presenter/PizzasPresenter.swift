@@ -25,18 +25,19 @@ class DefaultPizzasPresenter: BasePresenter, PizzasPresenter {
     func displayPizzas(_ pizzas: [Pizza], imageLoader: ImageDownloader) {
         let pizzaModels = pizzas.map { pizza -> PizzaBasicCellViewModel in
             let ingredients = ingredientsString(from: pizza.ingredients)
-            
-            return PizzaBasicCellViewModel(
-                name: pizza.name,
-                ingredients: ingredients,
-                imageURL: pizza.imageUrl,
-                basePrice: pizza.price.priceString(),
-                imageDownloader: imageLoader,
-                purchaseHandler: { pizzaModel in
-                    self.view?.addPurchaseToCart(with: pizzaModel)
-                }
-            )
+            let model = PizzaBasicCellViewModel(name: pizza.name,
+                                                ingredients: ingredients,
+                                                imageURL: pizza.imageUrl,
+                                                basePrice: pizza.price.priceString(),
+                                                imageDownloader: imageLoader,
+                                                purchaseHandler: nil)
+            let handler: OnActionExecute? = { [weak self] in
+                self?.view?.addPurchaseToCart(with: model)
+            }
+            model.purchaseHandler = handler
+            return model
         }
+        
         hideLoadingView()
         view?.display(pizzaModels)
     }

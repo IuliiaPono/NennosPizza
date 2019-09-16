@@ -8,13 +8,22 @@
 
 import UIKit
 
+private enum ConfigString: String {
+    case redSemiTransparent
+    case whiteSemiTransparent
+    case lightGray
+    case red
+    case `default`
+}
+
 final class BrandView: UIView {
     
     @IBInspectable var brandConfigId: String = "none" {
         didSet {
-            guard let config = BrandViewConfig.makeConfig(for: self.brandConfigId) else { assertionFailure(); return }
+            let configString: ConfigString = ConfigString(rawValue: self.brandConfigId) ?? .default
+            guard let config = BrandViewConfig.makeConfig(for: configString) else { assertionFailure(); return }
             
-            self.backgroundColor = config.bgColor.asUIColor()
+            self.backgroundColor = config.bgColor.asUIColor
             self.alpha = config.alpha
         }
     }
@@ -25,15 +34,15 @@ private struct BrandViewConfig {
     let bgColor: BrandColor
     let alpha: CGFloat
     
-    static func makeConfig(for id: String) -> BrandViewConfig? {
-        switch id {
-        case "redSemiTransparent":
+    static func makeConfig(for string: ConfigString) -> BrandViewConfig? {
+        switch string {
+        case .redSemiTransparent:
             return BrandViewConfig(bgColor: .red, alpha: 0.8)
-        case "whiteSemiTransparent":
+        case .whiteSemiTransparent:
             return BrandViewConfig(bgColor: .white, alpha: 0.8)
-        case "lightGray":
+        case .lightGray:
             return BrandViewConfig(bgColor: .lightGray, alpha: 1.0)
-        case "red":
+        case .red:
             return BrandViewConfig(bgColor: .red, alpha: 1.0)
         default:
             return nil

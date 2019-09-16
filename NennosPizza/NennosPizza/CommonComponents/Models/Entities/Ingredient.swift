@@ -9,7 +9,9 @@
 import Foundation
 
 struct Ingredient: Purchasable, Codable, Equatable {
-    let id: Int
+    typealias ID = Int
+    
+    let id: ID
     let name: String
     let price: Double
 }

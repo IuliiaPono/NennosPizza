@@ -20,11 +20,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         
-        if let window = window {
-            appCoordinator = ApplicationCoordinator(window: window, applicationContext: applicationContext)
-            
-            appCoordinator.start()
-        }
+        guard let window = window else { return true }
+        
+        appCoordinator = ApplicationCoordinator(window: window, applicationContext: applicationContext)
+        
+        appCoordinator.start()
         
         return true
     }

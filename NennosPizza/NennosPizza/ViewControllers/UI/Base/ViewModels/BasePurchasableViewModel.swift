@@ -15,13 +15,13 @@ protocol BasePurchasableViewProperties: class {
 }
 
 final class BasePurchasableViewModel: CellViewModel, BasePurchasableViewProperties {
-    let actionHandler: (_ model: BasePurchasableViewModel) -> Void
+    var actionHandler: OnActionExecute?
     
     let cellType: BaseCellType
     let productName: String
     let productPrice: String
     
-    init(cellType: BaseCellType, name: String, price: String, actionHandler: @escaping (_ model: BasePurchasableViewModel) -> Void) {
+    init(cellType: BaseCellType, name: String, price: String, actionHandler: OnActionExecute?) {
         self.cellType = cellType
         self.productName = name
         self.productPrice = price
@@ -33,7 +33,7 @@ final class BasePurchasableViewModel: CellViewModel, BasePurchasableViewProperti
         cell.setup(with: self) { [weak self] in
             guard let self = self else { return }
             
-            self.actionHandler(self)
+            self.actionHandler?()
         }
     }
 }

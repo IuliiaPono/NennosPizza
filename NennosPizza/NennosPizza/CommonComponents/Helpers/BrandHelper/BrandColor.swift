@@ -19,7 +19,7 @@ enum BrandColor {
 
 extension BrandColor {
     
-    func asUIColor() -> UIColor {
+    var asUIColor: UIColor {
         switch self {
         case .yellow:
             return UIColor(rgb: 0xFECD2C)

@@ -36,7 +36,7 @@ final class PizzaLoadingView: UIView {
         animationView.center = center
         animationView.autoresizingMask = [.flexibleTopMargin, .flexibleLeftMargin, .flexibleRightMargin ,.flexibleBottomMargin]
         
-        backgroundColor = BrandColor.black.asUIColor().withAlphaComponent(0.4)
+        backgroundColor = BrandColor.black.asUIColor.withAlphaComponent(0.4)
         
         animationView.backgroundBehavior = .pauseAndRestore
         animationView.setContentCompressionResistancePriority(.fittingSizeLevel, for: .horizontal)

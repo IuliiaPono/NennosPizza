@@ -33,6 +33,8 @@ extension CellViewModel {
     }
     
     public func setup(cell: AnyViewCell) {
-        setup(cell: cell as! Cell)
+        guard let cell = cell as? Cell else { return }
+        
+        setup(cell: cell)
     }
 }

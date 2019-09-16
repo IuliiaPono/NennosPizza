@@ -16,7 +16,7 @@ enum BrandFont {
 }
 
 extension BrandFont {
-    func asUIFont() -> UIFont {
+    var asUIFont: UIFont {
         switch self {
         case .titleSemibold:
             return UIFont.systemFont(ofSize: 24, weight: .semibold)

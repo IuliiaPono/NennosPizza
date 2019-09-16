@@ -26,14 +26,16 @@ class DefaultBeveragePresenter: BasePresenter {
 extension DefaultBeveragePresenter: BeveragePresenter {
     func displayBeverage(_ beverage: [Beverage]) {
         let viewModels = beverage.map { drink -> BasePurchasableViewModel in
-            return BasePurchasableViewModel(
-                cellType: .addable,
-                name: drink.name,
-                price: drink.price.priceString(),
-                actionHandler: { [weak self] model in
-                    self?.view?.addPurchaseToCart(with: model)
-                }
-            )
+            let model = BasePurchasableViewModel(cellType: .addable,
+                                                 name: drink.name,
+                                                 price: drink.price.priceString(),
+                                                 actionHandler: nil)
+            let actionHandler: OnActionExecute? = { [weak self] in
+                self?.view?.addPurchaseToCart(with: model)
+            }
+            model.actionHandler = actionHandler
+            
+            return model
         }
         
         hideLoadingView()

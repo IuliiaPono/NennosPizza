@@ -27,14 +27,16 @@ class DefaultCartPresenter: BasePresenter {
 extension DefaultCartPresenter: CartPresenter {
     func presentPurchases(_ purchases: [Purchasable]) {
         let viewModels = purchases.map { purchase -> BasePurchasableViewModel in
-            return BasePurchasableViewModel(
-                cellType: .deletable,
-                name: purchase.name,
-                price: purchase.price.priceString(),
-                actionHandler: { [weak self] purchaseModel in
-                    self?.view?.removeFromCart(purchaseModel)
-                }
-            )
+            let model = BasePurchasableViewModel(cellType: .deletable,
+                                                 name: purchase.name,
+                                                 price: purchase.price.priceString(),
+                                                 actionHandler: nil)
+            let actionHandler: OnActionExecute? = { [weak self] in
+                self?.view?.removeFromCart(model)
+            }
+            model.actionHandler = actionHandler
+            
+            return model
         }
         
         let totalPrice = purchases.map { $0.price }.reduce(0, +)

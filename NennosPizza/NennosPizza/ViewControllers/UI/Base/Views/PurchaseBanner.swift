@@ -16,7 +16,7 @@ final class PurchaseBanner {
         func color(for style: BannerStyle) -> UIColor {
             switch style {
             case .success:
-                return BrandColor.red.asUIColor()
+                return BrandColor.red.asUIColor
             default:
                 return UIColor.clear
             }

@@ -37,8 +37,8 @@ extension SupplementaryViewModel {
     }
     
     public func setup(view: AnySupplementaryView) {
-        // swiftlint:disable force_cast
-        setup(view: view as! View)
-        // swiftlint:enable force_cast
+        guard let view = view as? View else { return }
+        
+        setup(view: view)
     }
 }

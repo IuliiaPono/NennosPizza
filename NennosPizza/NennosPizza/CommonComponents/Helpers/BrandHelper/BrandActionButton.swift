@@ -52,11 +52,11 @@ final class BrandActionButton: UIButton {
     }
     
     private func apply(config: Config) {
-        self.layer.shadowColor = config.color.asUIColor().cgColor
-        self.titleLabel?.font = config.font.asUIFont()
-        self.backgroundColor = config.color.asUIColor()
-        self.setTitleColor(config.fontColor.asUIColor(), for: .normal)
-        self.setTitleColor(config.fontColor.asUIColor(), for: .highlighted)
+        self.layer.shadowColor = config.color.asUIColor.cgColor
+        self.titleLabel?.font = config.font.asUIFont
+        self.backgroundColor = config.color.asUIColor
+        self.setTitleColor(config.fontColor.asUIColor, for: .normal)
+        self.setTitleColor(config.fontColor.asUIColor, for: .highlighted)
     }
     
     private struct Config {
